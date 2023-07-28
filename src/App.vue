@@ -2,19 +2,20 @@
   <div class="flex flex-row justify-between max-w-screen-2xl m-auto px-10">
     <aside class="h-screen sticky top-0 basis-1/3">
       <div class="pt-20"></div>
-      <img class="w-52 rounded-full" :src="imgUrl" />
-      <div class="pt-10"></div>
-      <h1 class="text-4xl font-bold">{{ title }}</h1>
-      <p class="text-lg">{{ desc }}</p>
+      <div class="w-60">
+        <img class="w-52 rounded-full" :src="imgUrl" />
+        <div class="pt-10"></div>
+        <h1 class="text-4xl font-bold">{{ title }}</h1>
+        <p class="text-lg">{{ desc }}</p>
+      </div>
     </aside>
 
     <main>
       <div class="pt-20"></div>
       <!-- <p v-for="index in 1000" :key="index">// Content</p> -->
-      <div class="grid grid-cols-4 gap-4">
+      <div class="grid grid-cols-4 gap-x-8 w-[54rem]">
         <div class="col-span-2">
           <card_4x2 v-bind="titleCard"></card_4x2>
-          <div class="p-2"></div>
           <card_4x2 v-bind="blogCard"></card_4x2>
         </div>
         <div class="col-span-2">
@@ -26,16 +27,14 @@
         </div>
         <div class="col-span-1">
           <card_2x2 v-bind="primaryCards[0]"></card_2x2>
-          <div class="p-2"></div>
           <card_2x2 v-bind="primaryCards[1]"></card_2x2>
         </div>
         <div class="col-span-1">
           <card_2x2 v-bind="primaryCards[2]"></card_2x2>
-          <div class="p-2"></div>
           <card_2x2 v-bind="primaryCards[3]"></card_2x2>
         </div>
         <div class="col-span-2">
-          <div class="rounded-xl shadow-xl">
+          <div class="rounded-xl shadow-xl w-[26rem] h-[26rem]">
             <iframe
               width="400"
               height="400"
@@ -78,14 +77,16 @@ let info = {
   titleCard: {
     title: "翠翠 @idealclover",
     desc: "产品经理/独立开发者/个人博主/Vocaloid",
-    action: "我的简历",
+    btnText: "我的简历",
   },
   blogCard: {
     title: "博客",
     desc: "idealclover.top",
-    action: "我的简历",
-    bgColor: "bg-primary",
-    // textColor: "text-white"
+    btnText: "Follow 800",
+    bgColor: "bg-[#2C3E50]",
+    textColor: "text-white",
+    btnColor: "bg-[#162D3B]",
+    btnTextColor: "text-white",
   },
   secondaryCards: [
     {
@@ -109,18 +110,30 @@ let info = {
     {
       title: "知乎",
       bgColor: "bg-[#0275D2]",
+      btnText: "Follow 800",
+      btnColor: "bg-[#3A91EC]",
+      btnTextColor: "text-white",
     },
     {
       title: "Bilibili",
       bgColor: "bg-[#FB7299]",
+      btnText: "Follow 800",
+      btnColor: "bg-[#FD91AA]",
+      btnTextColor: "text-white",
     },
     {
       title: "GitHub",
       bgColor: "bg-[#181717]",
+      btnText: "Follow 800",
+      btnColor: "bg-[#4F4A4A]",
+      btnTextColor: "text-white",
     },
     {
       title: "网易云",
       bgColor: "bg-[#C20B0D]",
+      btnText: "Follow 800",
+      btnColor: "bg-[#E54141]",
+      btnTextColor: "text-white",
     },
   ],
   sectionTitles: [
