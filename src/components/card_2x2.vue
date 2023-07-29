@@ -1,11 +1,12 @@
 <template>
   <a :href="url" target="_blank">
     <div
-      class="'card rounded-2xl shadow-xl w-[12rem] h-[12rem] mb-8"
+      class="'card max-lg:card-compact rounded-2xl shadow-xl w-full max-sm:aspect-[1/1] md:aspect-[1/1] lg:w-[12rem] lg:h-[12rem] mb-8"
       :class="bgStyle"
     >
       <div class="card-body w-full h-full">
-        <h2 class="card-title" :class="textStyle">{{ title }}</h2>
+        <h2 class="card-title text-base sm:text-xl whitespace-nowrap" :class="textStyle">{{ title }}</h2>
+        <p :class="textStyle">{{ desc }}</p>
         <div class="h-full"></div>
         <div class="card-actions justify-end">
           <button
@@ -23,6 +24,7 @@
 <script setup>
 defineProps({
   title: String,
+  desc: String,
   url: String,
   btnText: String,
   bgStyle: String,
