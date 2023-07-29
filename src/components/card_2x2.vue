@@ -5,7 +5,12 @@
       :class="bgStyle"
     >
       <div class="card-body w-full h-full">
-        <h2 class="card-title text-base sm:text-xl whitespace-nowrap" :class="textStyle">{{ title }}</h2>
+        <h2
+          class="card-title text-base sm:text-xl whitespace-nowrap"
+          :class="textStyle"
+        >
+          {{ title }}
+        </h2>
         <p :class="textStyle">{{ desc }}</p>
         <div class="h-full"></div>
         <div class="card-actions justify-end">
