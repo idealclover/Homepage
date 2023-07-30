@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card rounded-2xl shadow-xl w-full lg:w-[54rem] min-h-[26rem] mb-8"
+    class="card rounded-2xl shadow-xl shadow-accent hover:shadow-gray-500 bg-primary w-full lg:w-[54rem] min-h-[26rem] mb-8"
   >
     <div class="card-body">
       <div class="pt-2"></div>

@@ -4,8 +4,8 @@
 
 @font-face {
     font-family: 'MaokenZhuyuanTi';
-    src: url('/static/font.woff')
-    /* src: url('https://cdn.idealclover.cn/Projects/homepage/font.woff'); */
+    /* src: url('/static/font.woff') */
+    src: url('https://cdn.idealclover.cn/Projects/homepage/font.woff');
 }
 
 body {

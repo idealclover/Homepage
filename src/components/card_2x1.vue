@@ -1,11 +1,11 @@
 <template>
   <a :href="url" target="_blank">
     <div
-      class="card max-lg:card-compact rounded-xl shadow-xl hover:bg-gray-50 hover:shadow-gray-400 w-full lg:w-[26rem] lg:h-[5rem] mb-8"
+      class="card max-lg:card-compact rounded-xl flex justify-center shadow-xl shadow-accent bg-primary hover:bg-primary-focus hover:shadow-gray-500 w-full lg:w-[26rem] lg:h-[5rem] mb-8"
     >
       <div class="card-body">
         <div class="flex">
-          <img :src="iconUrl" class="w-8 h-8 mr-2" :alt="title"/>
+          <img :src="iconUrl" class="w-8 h-8 mr-2" :alt="title" />
           <h2
             class="card-title max-md:text-sm whitespace-nowrap"
             :class="textStyle"

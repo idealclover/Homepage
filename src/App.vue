@@ -6,7 +6,7 @@
       >
         <div class="pt-20"></div>
         <div class="w-60">
-          <img class="w-32 md:w-52 rounded-full" :src="imgUrl" :alt="title"/>
+          <img class="w-32 md:w-52 rounded-full" :src="imgUrl" :alt="title" />
           <div class="pt-10"></div>
           <h1 class="text-4xl font-bold pl-2">{{ title }}</h1>
           <p class="text-lg pl-2">{{ desc }}</p>
@@ -54,7 +54,7 @@
             class="hidden md:block col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative"
           >
             <div
-              class="rounded-xl shadow-xl w-full h-full lg:w-[26rem] lg:h-[26rem] absolute"
+              class="rounded-xl shadow-xl shadow-accent hover:shadow-gray-500 w-full h-full lg:w-[26rem] lg:h-[26rem] absolute"
               id="map-container"
             ></div>
             <div
@@ -180,7 +180,8 @@ const info = {
     desc: "产品经理/独立开发者/个人博主/Vocaloid",
     url: "https://idealclover.top/about.html",
     // url: "https://cdn.idealclover.cn/Projects/homepage/resume.pdf",
-    bgStyle: "hover:bg-gray-50 hover:shadow-gray-400",
+    bgStyle:
+      "bg-primary shadow-accent hover:bg-primary-focus hover:shadow-gray-500",
     btnText: "了解更多",
     // btnText: "我的简历",
   },
@@ -226,7 +227,7 @@ const info = {
         "bg-[#0275D2] shadow-[#0275D2]/75 hover:bg-[#0275D2]/75 hover:shadow-[#0275D2]",
       btnText: "Follow",
       textStyle: "text-white",
-      btnStyle: "bg-[#3A91EC]",
+      btnStyle: "bg-[#3A91EC] hover:bg-[#78B0F9]",
       btnTextStyle: "text-white",
       updateUrl: "https://api.swo.moe/stats/zhihu/cuicuijiang",
     },
@@ -237,7 +238,7 @@ const info = {
         "bg-[#FB7299] shadow-[#FB7299]/75 hover:bg-[#FB7299]/75 hover:shadow-[#FB7299]",
       btnText: "Follow",
       textStyle: "text-white",
-      btnStyle: "bg-[#FD91AA]",
+      btnStyle: "bg-[#FD91AA] hover:bg-[#FEB2BF]",
       btnTextStyle: "text-white",
       updateUrl: "https://api.swo.moe/stats/bilibili/5044093",
     },
@@ -248,7 +249,7 @@ const info = {
         "bg-[#181717] shadow-[#181717]/75 hover:bg-[#181717]/75 hover:shadow-[#181717]",
       btnText: "Follow",
       textStyle: "text-white",
-      btnStyle: "bg-[#4F4A4A]",
+      btnStyle: "bg-[#4F4A4A] hover:bg-[#9D9796]",
       btnTextStyle: "text-white",
       updateUrl: "https://api.swo.moe/stats/github/idealclover",
     },
@@ -259,7 +260,7 @@ const info = {
         "bg-[#C20B0D] shadow-[#C20B0D]/75 hover:bg-[#C20B0D]/75 hover:shadow-[#C20B0D]",
       btnText: "Follow",
       textStyle: "text-white",
-      btnStyle: "bg-[#E54141]",
+      btnStyle: "bg-[#E54141] hover:bg-[#F77D7D]",
       btnTextStyle: "text-white",
       updateUrl: "https://api.swo.moe/stats/neteasemusic/78983390",
     },
@@ -286,7 +287,7 @@ const info = {
     bgStyle:
       "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_nnkb_2.jpg')] bg-cover bg-center shadow-[#2C3E50]/75 hover:shadow-[#2C3E50]",
     textStyle: "whitespace-pre-line",
-    btnStyle: "bg-[#162D3B]",
+    btnStyle: "glass",
     btnTextStyle: "text-white lowercase",
   },
   projectCards: [
@@ -315,46 +316,46 @@ const info = {
     {
       title: "我要戴口罩",
       desc: "微信小程序",
-      url: "",
+      url: "https://idealclover.top/archives/602",
       btnText: "1M+ 👤",
-      bgStyle: "bg-gray-100 hover:bg-gray-50 hover:shadow-gray-400",
+      bgStyle:
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
       // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_mask_2.jpg')] bg-cover",
-      textStyle: "text-black",
-      btnStyle: "bg-[#162D3B]",
-      btnTextStyle: "text-white",
+      // btnStyle: "bg-[#162D3B]",
+      // btnTextStyle: "text-white",
     },
     {
       title: "毕业帽头像",
       desc: "微信小程序",
-      url: "",
+      url: "https://idealclover.top/archives/622",
       btnText: "1K+ 👤",
-      bgStyle: "bg-gray-100 hover:bg-gray-50 hover:shadow-gray-400",
+      bgStyle:
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
       // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_bachelor.png')] bg-cover",
-      // textStyle: "text-white",
-      btnStyle: "bg-[#162D3B]",
-      btnTextStyle: "text-white",
+      // btnStyle: "bg-[#162D3B]",
+      // btnTextStyle: "text-white",
     },
     {
       title: "可配置打赏页",
       desc: "H5网页",
       url: "https://donate.idealclover.cn",
       btnText: "62 ✨",
-      bgStyle: "bg-gray-100 hover:bg-gray-50 hover:shadow-gray-400",
+      bgStyle:
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
       // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover",
-      // textStyle: "text-white",
-      btnStyle: "bg-[#162D3B]",
-      btnTextStyle: "text-white",
+      // btnStyle: "bg-[#162D3B]",
+      // btnTextStyle: "text-white",
     },
     {
       title: "可配置下载页",
       desc: "H5网页",
       url: "https://nju.app",
       btnText: "32 ✨",
-      bgStyle: "bg-gray-100 hover:bg-gray-50 hover:shadow-gray-400",
+      bgStyle:
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
       // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover",
-      // textStyle: "text-white",
-      btnStyle: "bg-[#162D3B]",
-      btnTextStyle: "text-white",
+      // btnStyle: "bg-[#162D3B]",
+      // btnTextStyle: "text-white",
     },
     {
       title: "Caritas APP",
@@ -363,7 +364,7 @@ const info = {
       btnText: "900+ 👍",
       // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover",
       textStyle: "text-white",
-      btnStyle: "bg-[#FEAD68]",
+      btnStyle: "bg-[#FEAD68] hover:bg-[#FFCC96]",
       btnTextStyle: "text-white",
       bgStyle:
         "bg-[#fc883b] shadow-[#fc883b]/75 hover:bg-[#fc883b]/75 hover:shadow-[#fc883b]",
@@ -375,7 +376,7 @@ const info = {
       btnText: "118 ✨",
       // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover",
       textStyle: "text-white",
-      btnStyle: "bg-[#54E236]",
+      btnStyle: "bg-[#54E236] hover:bg-[#84F675]",
       btnTextStyle: "text-white",
       bgStyle:
         "bg-[#2cbb00] shadow-[#2cbb00]/75 hover:bg-[#2cbb00]/75 hover:shadow-[#2cbb00]",
@@ -389,7 +390,7 @@ const info = {
     bgStyle:
       "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_github.jpg')] bg-cover bg-center shadow-[#6e5494]/75 hover:shadow-[#6e5494]",
     textStyle: "text-white",
-    btnStyle: "bg-[#181717]",
+    btnStyle: "glass",
     btnTextStyle: "text-white capitalize",
   },
   musicCards: [
@@ -399,9 +400,9 @@ const info = {
       url: "https://www.bilibili.com/video/BV1cs4y1z7Mq",
       btnText: "2227 views 🎥",
       bgStyle:
-        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover bg-center shadow-gray-400 hover:shadow-gray-600",
+        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
-      btnStyle: "bg-[#162D3B]",
+      btnStyle: "glass",
       btnTextStyle: "text-white capitalize",
     },
     {
@@ -410,9 +411,9 @@ const info = {
       url: "https://www.bilibili.com/video/BV1BF411L7AH",
       btnText: "1400 views 🎥",
       bgStyle:
-        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_2.jpg')] bg-cover bg-center shadow-gray-400 hover:shadow-gray-600",
+        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_2.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
-      btnStyle: "bg-[#162D3B]",
+      btnStyle: "glass",
       btnTextStyle: "text-white capitalize",
     },
     {
@@ -421,9 +422,9 @@ const info = {
       url: "https://www.bilibili.com/video/BV11G4y1z7XZ",
       btnText: "1861 views 🎥",
       bgStyle:
-        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_3.jpg')] bg-cover bg-center shadow-gray-400 hover:shadow-gray-600",
+        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_3.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
-      btnStyle: "bg-[#162D3B]",
+      btnStyle: "glass",
       btnTextStyle: "text-white capitalize",
     },
     {
@@ -432,9 +433,9 @@ const info = {
       url: "https://space.bilibili.com/5044093",
       btnText: "查看更多",
       bgStyle:
-        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_4.jpg')] bg-cover bg-center shadow-gray-400 hover:shadow-gray-600",
+        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_4.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
-      btnStyle: "bg-[#162D3B]",
+      btnStyle: "glass",
       btnTextStyle: "text-white capitalize",
     },
   ],
