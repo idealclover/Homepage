@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-    font-family: 'Comic Sans MS';
-    src: url("/static/comic.ttf");
-} */
+@font-face {
+    font-family: 'MaokenZhuyuanTi';
+    src: url('/static/font.woff')
+    /* src: url('https://cdn.idealclover.cn/Projects/homepage/font.woff'); */
+}
 
-#app {
+body {
+    cursor: url('https://cdn.idealclover.cn/Projects/homepage/cursor.ico'),auto;
     font-family:'MaokenZhuyuanTi';
 }

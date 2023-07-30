@@ -5,7 +5,7 @@
     >
       <div class="card-body">
         <div class="flex">
-          <img :src="iconUrl" class="w-8 h-8 mr-2" />
+          <img :src="iconUrl" class="w-8 h-8 mr-2" :alt="title"/>
           <h2
             class="card-title max-md:text-sm whitespace-nowrap"
             :class="textStyle"

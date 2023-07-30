@@ -6,10 +6,22 @@
       >
         <div class="pt-20"></div>
         <div class="w-60">
-          <img class="w-32 md:w-52 rounded-full" :src="imgUrl" />
+          <img class="w-32 md:w-52 rounded-full" :src="imgUrl" :alt="title"/>
           <div class="pt-10"></div>
-          <h1 class="text-4xl font-bold">{{ title }}</h1>
-          <p class="text-lg">{{ desc }}</p>
+          <h1 class="text-4xl font-bold pl-2">{{ title }}</h1>
+          <p class="text-lg pl-2">{{ desc }}</p>
+          <div class="pt-5"></div>
+          <div class="flex flex-row w-full">
+            <a
+              class="basis-1/4"
+              v-for="card in teleCards"
+              :key="card.title"
+              :href="card.url"
+              target="_blank"
+            >
+              <img :src="card.iconUrl" :alt="card.title" />
+            </a>
+          </div>
         </div>
       </aside>
 
@@ -112,10 +124,23 @@
             >
           </div>
           <div class="">
-            💡 inspired by
-            <a href="https://bento.me" target="_blank" class="text-gray-400"
-              >bento.me</a
+            🚀 powered by
+            <a
+              href="https://tailwindcss.com/"
+              target="_blank"
+              class="text-gray-400"
             >
+              tailwindcss
+            </a>
+            <a href="https://vuejs.org/" target="_blank" class="text-gray-400">
+              Vue.js
+            </a>
+          </div>
+          <div class="">
+            💡 inspired by
+            <a href="https://bento.me" target="_blank" class="text-gray-400">
+              bento.me
+            </a>
           </div>
         </footer>
         <div class="pt-10"></div>
@@ -148,14 +173,16 @@ import article_list from "./components/article_list.vue";
 const info = {
   title: "idealclover",
   desc: "Stay simple, stay naive.",
-  imgUrl: "https://image.idealclover.cn/blog/assets/icon.png",
+  imgUrl: "https://cdn.idealclover.cn/Projects/homepage/icon.jpg",
   location: "Beijing, China",
   titleCard: {
     title: "翠翠 @idealclover",
     desc: "产品经理/独立开发者/个人博主/Vocaloid",
-    url: "https://cdn.idealclover.cn/Projects/homepage/resume.pdf",
+    url: "https://idealclover.top/about.html",
+    // url: "https://cdn.idealclover.cn/Projects/homepage/resume.pdf",
     bgStyle: "hover:bg-gray-50 hover:shadow-gray-400",
-    btnText: "我的简历",
+    btnText: "了解更多",
+    // btnText: "我的简历",
   },
   blogCard: {
     title: "博客",
@@ -197,40 +224,44 @@ const info = {
       // bgStyle: "bg-[#0275D2] hover:bg-[#0275D2]/75",
       bgStyle:
         "bg-[#0275D2] shadow-[#0275D2]/75 hover:bg-[#0275D2]/75 hover:shadow-[#0275D2]",
-      btnText: "Follow 2636",
+      btnText: "Follow",
       textStyle: "text-white",
       btnStyle: "bg-[#3A91EC]",
       btnTextStyle: "text-white",
+      updateUrl: "https://api.swo.moe/stats/zhihu/cuicuijiang",
     },
     {
       title: "Bilibili",
       url: "https://space.bilibili.com/5044093",
       bgStyle:
         "bg-[#FB7299] shadow-[#FB7299]/75 hover:bg-[#FB7299]/75 hover:shadow-[#FB7299]",
-      btnText: "Follow 1150",
+      btnText: "Follow",
       textStyle: "text-white",
       btnStyle: "bg-[#FD91AA]",
       btnTextStyle: "text-white",
+      updateUrl: "https://api.swo.moe/stats/bilibili/5044093",
     },
     {
       title: "GitHub",
       url: "https://github.com/idealclover",
       bgStyle:
         "bg-[#181717] shadow-[#181717]/75 hover:bg-[#181717]/75 hover:shadow-[#181717]",
-      btnText: "Follow 624",
+      btnText: "Follow",
       textStyle: "text-white",
       btnStyle: "bg-[#4F4A4A]",
       btnTextStyle: "text-white",
+      updateUrl: "https://api.swo.moe/stats/github/idealclover",
     },
     {
       title: "网易云",
       url: "https://music.163.com/#/artist?id=52267156",
       bgStyle:
         "bg-[#C20B0D] shadow-[#C20B0D]/75 hover:bg-[#C20B0D]/75 hover:shadow-[#C20B0D]",
-      btnText: "Follow 54",
+      btnText: "Follow",
       textStyle: "text-white",
       btnStyle: "bg-[#E54141]",
       btnTextStyle: "text-white",
+      updateUrl: "https://api.swo.moe/stats/neteasemusic/78983390",
     },
   ],
   sectionTitles: [
@@ -253,7 +284,7 @@ const info = {
     url: "https://nju.app",
     btnText: "https://nju.app",
     bgStyle:
-      "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_nnkb_2.png')] bg-cover shadow-[#2C3E50]/75 hover:shadow-[#2C3E50]",
+      "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_nnkb_2.jpg')] bg-cover bg-center shadow-[#2C3E50]/75 hover:shadow-[#2C3E50]",
     textStyle: "whitespace-pre-line",
     btnStyle: "bg-[#162D3B]",
     btnTextStyle: "text-white lowercase",
@@ -353,10 +384,10 @@ const info = {
   projectCardEnd: {
     title: "在 GitHub 查看更多开源创作",
     // desc: "@idealclover",
-    url: "",
-    btnText: "2500+ ✨",
+    url: "https://github.com/idealclover",
+    btnText: "2500+ Stars ✨",
     bgStyle:
-      "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_github.png')] bg-cover shadow-[#6e5494]/75 hover:shadow-[#6e5494]",
+      "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_github.jpg')] bg-cover bg-center shadow-[#6e5494]/75 hover:shadow-[#6e5494]",
     textStyle: "text-white",
     btnStyle: "bg-[#181717]",
     btnTextStyle: "text-white capitalize",
@@ -368,7 +399,7 @@ const info = {
       url: "https://www.bilibili.com/video/BV1cs4y1z7Mq",
       btnText: "2227 views 🎥",
       bgStyle:
-        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover shadow-gray-400 hover:shadow-gray-600",
+        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover bg-center shadow-gray-400 hover:shadow-gray-600",
       textStyle: "text-white",
       btnStyle: "bg-[#162D3B]",
       btnTextStyle: "text-white capitalize",
@@ -379,7 +410,7 @@ const info = {
       url: "https://www.bilibili.com/video/BV1BF411L7AH",
       btnText: "1400 views 🎥",
       bgStyle:
-        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_2.jpg')] bg-cover shadow-gray-400 hover:shadow-gray-600",
+        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_2.jpg')] bg-cover bg-center shadow-gray-400 hover:shadow-gray-600",
       textStyle: "text-white",
       btnStyle: "bg-[#162D3B]",
       btnTextStyle: "text-white capitalize",
@@ -390,7 +421,7 @@ const info = {
       url: "https://www.bilibili.com/video/BV11G4y1z7XZ",
       btnText: "1861 views 🎥",
       bgStyle:
-        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_3.jpg')] bg-cover shadow-gray-400 hover:shadow-gray-600",
+        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_3.jpg')] bg-cover bg-center shadow-gray-400 hover:shadow-gray-600",
       textStyle: "text-white",
       btnStyle: "bg-[#162D3B]",
       btnTextStyle: "text-white capitalize",
@@ -401,7 +432,7 @@ const info = {
       url: "https://space.bilibili.com/5044093",
       btnText: "查看更多",
       bgStyle:
-        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_4.png')] bg-cover shadow-gray-400 hover:shadow-gray-600",
+        "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_4.jpg')] bg-cover bg-center shadow-gray-400 hover:shadow-gray-600",
       textStyle: "text-white",
       btnStyle: "bg-[#162D3B]",
       btnTextStyle: "text-white capitalize",
@@ -435,6 +466,16 @@ const info = {
   ],
 };
 
+// function getFollower() {
+//   console.log(this.primaryCards);
+
+//   for (item in this.primaryCards) {
+//     Vue.axios.get(item.updateUrl).then((response) => {
+//       console.log(response.data);
+//     });
+//   }
+// }
+
 window.init = function () {
   var map = new AMap.Map("map-container", {
     center: [116.397428, 39.90923],
@@ -446,6 +487,18 @@ export default {
   components: { card_4x2, card_2x2, card_8x1, card_2x1, article_list },
   data() {
     return info;
+  },
+  mounted() {
+    for (let i = 0; i < this.primaryCards.length; i++) {
+      fetch(this.primaryCards[i].updateUrl, {
+        headers: { "Content-type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((response) => {
+          this.primaryCards[i].btnText =
+            this.primaryCards[i].btnText + " " + response.count;
+        });
+    }
   },
 };
 </script>

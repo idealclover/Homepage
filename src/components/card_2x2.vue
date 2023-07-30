@@ -15,7 +15,7 @@
         <div class="h-full"></div>
         <div class="card-actions justify-end">
           <button
-            class="btn btn-sm rounded-xl capitalize border-0"
+            class="btn btn-sm rounded-xl capitalize border-0 max-w-full whitespace-nowrap"
             :class="[btnStyle, btnTextStyle]"
           >
             {{ btnText }}
