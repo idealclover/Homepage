@@ -5,8 +5,12 @@
         class="min-w-full md:min-w-0 xl:basis-1/3 xl:h-screen xl:sticky xl:top-0"
       >
         <div class="pt-20"></div>
-        <div class="w-60">
-          <img class="w-32 md:w-52 rounded-full" :src="imgUrl" :alt="title" />
+        <div class="w-64">
+          <img
+            class="w-32 h-32 md:w-52 md:h-52 rounded-full"
+            :src="imgUrl"
+            :alt="title"
+          />
           <div class="pt-10"></div>
           <h1 class="text-4xl font-bold pl-2">{{ title }}</h1>
           <p class="text-lg pl-2">{{ desc }}</p>
@@ -16,10 +20,12 @@
               class="basis-1/4"
               v-for="card in teleCards"
               :key="card.title"
+              :aria-label="card.title"
               :href="card.url"
               target="_blank"
             >
-              <img :src="card.iconUrl" :alt="card.title" />
+              <div :class="card.iconInfoClass"></div>
+              <!-- <img :src="card.iconUrl" :alt="card.title" /> -->
             </a>
           </div>
         </div>
@@ -51,7 +57,8 @@
           </div>
 
           <div
-            class="hidden md:block col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative"
+            v-if="width >= 768"
+            class="col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative"
           >
             <div
               class="rounded-xl shadow-xl shadow-accent hover:shadow-gray-500 w-full h-full lg:w-[26rem] lg:h-[26rem] absolute"
@@ -112,7 +119,7 @@
             <card_2x1 v-bind="card"></card_2x1>
           </div>
         </div>
-        <div class="pt-20"></div>
+        <div class="pt-16"></div>
         <footer class="text-center">
           <div class="">
             made with ❤️ by
@@ -123,7 +130,7 @@
               >idealclover</a
             >
           </div>
-          <div class="">
+          <div>
             🚀 powered by
             <a
               href="https://tailwindcss.com/"
@@ -136,10 +143,15 @@
               Vue.js
             </a>
           </div>
-          <div class="">
+          <div>
             💡 inspired by
             <a href="https://bento.me" target="_blank" class="text-gray-400">
               bento.me
+            </a>
+          </div>
+          <div>
+            <a href="https://beian.miit.gov.cn" target="_blank" class="text-gray-400">
+              苏ICP备19010018号
             </a>
           </div>
         </footer>
@@ -171,9 +183,13 @@ import article_list from "./components/article_list.vue";
 // }
 
 const info = {
+  // for system
+  width: 0,
+  flag: false,
+
   title: "idealclover",
   desc: "Stay simple, stay naive.",
-  imgUrl: "https://cdn.idealclover.cn/Projects/homepage/icon.jpg",
+  imgUrl: "https://cdn.idealclover.cn/Projects/homepage/icon.png",
   location: "Beijing, China",
   titleCard: {
     title: "翠翠 @idealclover",
@@ -200,22 +216,26 @@ const info = {
     {
       title: "即刻",
       url: "https://web.okjike.com/u/e2ede1ee-79e6-420b-92fc-9983566db44c",
-      iconUrl: "https://cdn.idealclover.cn/Projects/homepage/jike.png",
+      // iconUrl: "https://cdn.idealclover.cn/Projects/homepage/jike.png",
+      iconClass: "jike",
     },
     {
       title: "酷安",
       url: "https://www.coolapk.com/u/999081",
-      iconUrl: "https://cdn.idealclover.cn/Projects/homepage/coolapk.svg",
+      // iconUrl: "https://cdn.idealclover.cn/Projects/homepage/coolapk.svg",
+      iconClass: "coolapk",
     },
     {
       title: "少数派",
       url: "https://sspai.com/u/idealclover",
-      iconUrl: "https://cdn.idealclover.cn/Projects/homepage/sspai.svg",
+      // iconUrl: "https://cdn.idealclover.cn/Projects/homepage/sspai.svg",
+      iconClass: "sspai",
     },
     {
       title: "Steam",
       url: "https://steamcommunity.com/id/idealclover",
-      iconUrl: "https://cdn.idealclover.cn/Projects/homepage/Steam.svg",
+      // iconUrl: "https://cdn.idealclover.cn/Projects/homepage/Steam.svg",
+      iconClass: "Steam",
     },
   ],
   primaryCards: [
@@ -443,25 +463,33 @@ const info = {
     {
       title: "Email: idealclover@163.com",
       url: "mailto:idealclover@163.com",
-      iconUrl: "https://image.idealclover.cn/blog/assets/icons/mail.png",
+      // iconUrl: "https://image.idealclover.cn/blog/assets/icons/mail.png",
+      iconClass: "mail_s",
+      iconInfoClass: "mail",
       textStyle: "font-normal",
     },
     {
       title: "QQ: 1455169173",
       url: "http://wpa.qq.com/msgrd?v=3&uin=1455169173&site=qq&menu=yes",
-      iconUrl: "https://image.idealclover.cn/blog/assets/icons/QQ.png",
+      // iconUrl: "https://image.idealclover.cn/blog/assets/icons/QQ.png",
+      iconClass: "QQ_s",
+      iconInfoClass: "QQ",
       textStyle: "font-normal",
     },
     {
       title: "Telegram: @idealclover",
       url: "http://t.me/idealclover",
-      iconUrl: "https://image.idealclover.cn/blog/assets/icons/telegram.png",
+      // iconUrl: "https://image.idealclover.cn/blog/assets/icons/telegram.png",
+      iconClass: "telegram_s",
+      iconInfoClass: "telegram",
       textStyle: "font-normal",
     },
     {
       title: "Twitter: @idealclover",
       url: "https://twitter.com/idealclover",
-      iconUrl: "https://image.idealclover.cn/blog/assets/icons/twitter.png",
+      // iconUrl: "https://image.idealclover.cn/blog/assets/icons/twitter.png",
+      iconClass: "twitter_s",
+      iconInfoClass: "twitter",
       textStyle: "font-normal",
     },
   ],
@@ -500,6 +528,25 @@ export default {
             this.primaryCards[i].btnText + " " + response.count;
         });
     }
+  },
+  // 按需加载高德地图组件 tmd 要不太拖累性能了
+  created() {
+    window.addEventListener("resize", this.handleResize);
+    this.handleResize();
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.handleResize);
+  },
+  methods: {
+    handleResize() {
+      this.width = window.innerWidth;
+      if (!this.flag && this.width > 768) {
+        var newScript = document.createElement("script");
+        newScript.src = "https://webapi.amap.com/maps?v=1.4.15&callback=init";
+        document.head.appendChild(newScript);
+        this.flag = true;
+      }
+    },
   },
 };
 </script>

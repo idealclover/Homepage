@@ -4,38 +4,25 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/static/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.idealclover.cn/Projects/homepage/font/result.css"
-    /> -->
     <title>idealclover</title>
-  </head>
-  <body>
-    <!-- https://fonts.gstatic.com is the font file origin -->
-    <!-- It may not have the same origin as the CSS file (https://fonts.googleapis.com) -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- We use the full link to the CSS file in the rest of the tags -->
+    <meta name="description" content="idealclover 的个人名片" />
     <link
       rel="preload"
-      as="style"
-      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
-    /><link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
-      media="print"
-      onload="this.media='all'"
-    /><noscript>
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
-    /></noscript>
-
+      href="https://cdn.idealclover.cn/Projects/homepage/font.woff"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="https://cdn.idealclover.cn/Projects/homepage/icons.png"
+      as="image"
+      type="image/png"
+    />
+  </head>
+  <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
-    <script
-      defer
-      src="https://webapi.amap.com/maps?v=1.4.15&callback=init"
-    ></script>
     <script
       defer
       src="https://cdn.idealclover.cn/Projects/homepage/mouse-click.js"

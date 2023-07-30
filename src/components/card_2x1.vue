@@ -5,9 +5,10 @@
     >
       <div class="card-body">
         <div class="flex">
-          <img :src="iconUrl" class="w-8 h-8 mr-2" :alt="title" />
+          <!-- <img :src="iconUrl" class="w-8 h-8 mr-2" :alt="title" /> -->
+          <div class="w-8 h-8 mr-2" :class="iconClass"></div>
           <h2
-            class="card-title max-md:text-sm whitespace-nowrap"
+            class="card-title max-lg:text-sm whitespace-nowrap"
             :class="textStyle"
           >
             {{ title }}
@@ -24,6 +25,7 @@ defineProps({
   url: String,
   imgUrl: String,
   iconUrl: String,
+  iconClass: String,
   textStyle: String,
 });
 </script>
