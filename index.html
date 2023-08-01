@@ -2,10 +2,20 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/static/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>idealclover</title>
-    <meta name="description" content="idealclover 的个人名片" />
+    <meta name="description" content="翠翠的个人名片👋" />
+    <meta property="og:title" content="idealclover" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="翠翠的个人名片👋" />
+    <meta property="og:url" content="https://idealclover.cn" />
+    <meta
+      property="og:image"
+      content="https://cdn.idealclover.cn/Projects/homepage/cover.png"
+    />
     <link
       rel="preload"
       href="https://image.idealclover.cn/projects/Homepage/assets/font.woff"
@@ -19,8 +29,40 @@
       as="image"
       type="image/png"
     />
+    <link
+      rel="shortcut icon"
+      href="https://cdn.idealclover.cn/Projects/homepage/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://cdn.idealclover.cn/Projects/homepage/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://cdn.idealclover.cn/Projects/homepage/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://cdn.idealclover.cn/Projects/homepage/favicon-16x16.png"
+    />
+    <link
+      rel="manifest"
+      href="https://image.idealclover.cn/projects/Homepage/assets/site.webmanifest"
+    />
+    <link rel="dns-prefetch" href="//idealclover.top" />
   </head>
   <body>
+    <div style="display: none">
+      <img
+        src="https://cdn.idealclover.cn/Projects/homepage/cover.png"
+        alt=""
+      />
+    </div>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
     <script
@@ -68,12 +110,14 @@
     </script>
 
     <!-- Google tag (gtag.js) -->
+    <!-- cn 还需要改备案 -->
+    <!-- top 还需要改sw -->
     <!-- cn W8NZX8HDXQ -->
     <!-- top K3RTHCN381 -->
     <!-- moe EPS8XLSB6V -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-EPS8XLSB6V"
+      src="https://www.googletagmanager.com/gtag/js?id=G-W8NZX8HDXQ"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -82,7 +126,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-EPS8XLSB6V");
+      gtag("config", "G-W8NZX8HDXQ");
     </script>
   </body>
 </html>

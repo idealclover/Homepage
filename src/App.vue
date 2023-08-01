@@ -149,11 +149,11 @@
               bento.me
             </a>
           </div>
-          <!-- <div>
+          <div>
             <a href="https://beian.miit.gov.cn" target="_blank" class="text-gray-400">
               苏ICP备19010018号
             </a>
-          </div> -->
+          </div>
         </footer>
         <div class="pt-10"></div>
       </main>
@@ -306,9 +306,9 @@ const info = {
     btnText: "https://nju.app",
     bgStyle:
       "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_nnkb_2.jpg')] bg-cover bg-center shadow-[#2C3E50]/75 hover:shadow-[#2C3E50]",
-    textStyle: "whitespace-pre-line",
+    textStyle: "text-black whitespace-pre-line",
     btnStyle: "glass",
-    btnTextStyle: "text-white lowercase",
+    btnTextStyle: "text-black lowercase",
   },
   projectCards: [
     {
