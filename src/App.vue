@@ -8,17 +8,18 @@
         <div class="w-64">
           <img
             class="w-32 h-32 md:w-52 md:h-52 rounded-full"
-            :src="imgUrl"
-            :alt="title"
+            :src="info.imgUrl"
+            :alt="info.title"
           />
           <div class="pt-10"></div>
-          <h1 class="text-4xl font-bold pl-2">{{ title }}</h1>
-          <p class="text-lg pl-2">{{ desc }}</p>
+          <h1 class="text-4xl font-bold pl-2">{{ info.title }}</h1>
+          <p class="text-lg pl-2">{{ info.desc }}</p>
+
           <div class="pt-5"></div>
           <div class="flex flex-row w-full">
             <a
               class="basis-1/4"
-              v-for="card in teleCards"
+              v-for="card in info.teleCards"
               :key="card.title"
               :aria-label="card.title"
               :href="card.url"
@@ -36,24 +37,26 @@
         <!-- <p v-for="index in 1000" :key="index">// Content</p> -->
         <div class="grid grid-cols-4 gap-x-8 lg:w-[54rem]">
           <div class="col-span-4 md:col-span-2">
-            <card_4x2 v-bind="titleCard"></card_4x2>
-            <card_4x2 v-bind="blogCard"></card_4x2>
+            <card_4x2
+              v-bind="showCV ? info.cvTitleCard : info.titleCard"
+            ></card_4x2>
+            <card_4x2 v-bind="info.blogCard"></card_4x2>
           </div>
 
           <div class="hidden md:block col-span-4 md:col-span-2 md:col-start-3">
             <card_2x1
-              v-for="card in secondaryCards"
+              v-for="card in info.secondaryCards"
               v-bind="card"
               :key="card.title"
             ></card_2x1>
           </div>
           <div class="col-span-2 md:col-span-1">
-            <card_2x2 v-bind="primaryCards[0]"></card_2x2>
-            <card_2x2 v-bind="primaryCards[1]"></card_2x2>
+            <card_2x2 v-bind="info.primaryCards[0]"></card_2x2>
+            <card_2x2 v-bind="info.primaryCards[1]"></card_2x2>
           </div>
           <div class="col-span-2 md:col-span-1">
-            <card_2x2 v-bind="primaryCards[2]"></card_2x2>
-            <card_2x2 v-bind="primaryCards[3]"></card_2x2>
+            <card_2x2 v-bind="info.primaryCards[2]"></card_2x2>
+            <card_2x2 v-bind="info.primaryCards[3]"></card_2x2>
           </div>
 
           <div
@@ -67,41 +70,41 @@
             <div
               class="absolute bottom-8 right-8 badge badge-neutral p-4 rounded-xl font-semibold"
             >
-              {{ location }}
+              {{ info.location }}
             </div>
           </div>
 
           <!-- 文章列表 -->
           <div class="col-span-4">
-            <card_8x1 v-bind="sectionTitles[0]"></card_8x1>
+            <card_8x1 v-bind="info.sectionTitles[0]"></card_8x1>
             <article_list></article_list>
           </div>
 
           <!-- 个人项目 -->
           <div class="col-span-4">
-            <card_8x1 v-bind="sectionTitles[1]"></card_8x1>
+            <card_8x1 v-bind="info.sectionTitles[1]"></card_8x1>
           </div>
           <div class="col-span-4 md:col-span-2">
-            <card_4x2 v-bind="projectCardStart"></card_4x2>
+            <card_4x2 v-bind="info.projectCardStart"></card_4x2>
           </div>
           <div
             class="col-span-2 md:col-span-1"
-            v-for="card in projectCards"
+            v-for="card in info.projectCards"
             :key="card.title"
           >
             <card_2x2 v-bind="card"></card_2x2>
           </div>
           <div class="col-span-4 md:col-span-2">
-            <card_4x2 v-bind="projectCardEnd"></card_4x2>
+            <card_4x2 v-bind="info.projectCardEnd"></card_4x2>
           </div>
 
           <!-- 音乐创作 -->
           <div class="col-span-4">
-            <card_8x1 v-bind="sectionTitles[2]"></card_8x1>
+            <card_8x1 v-bind="info.sectionTitles[2]"></card_8x1>
           </div>
           <div
             class="col-span-4 md:col-span-2"
-            v-for="card in musicCards"
+            v-for="card in info.musicCards"
             :key="card.title"
           >
             <card_4x2 v-bind="card"></card_4x2>
@@ -109,11 +112,11 @@
 
           <!-- 联系方式 -->
           <div class="col-span-4">
-            <card_8x1 v-bind="sectionTitles[3]"></card_8x1>
+            <card_8x1 v-bind="info.sectionTitles[3]"></card_8x1>
           </div>
           <div
             class="col-span-4 md:col-span-2"
-            v-for="card in teleCards"
+            v-for="card in info.teleCards"
             :key="card.title"
           >
             <card_2x1 v-bind="card"></card_2x1>
@@ -150,7 +153,11 @@
             </a>
           </div>
           <div>
-            <a href="https://beian.miit.gov.cn" target="_blank" class="text-gray-400">
+            <a
+              href="https://beian.miit.gov.cn"
+              target="_blank"
+              class="text-gray-400"
+            >
               苏ICP备19010018号
             </a>
           </div>
@@ -161,12 +168,13 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import card_4x2 from "./components/card_4x2.vue";
 import card_2x2 from "./components/card_2x2.vue";
 import card_8x1 from "./components/card_8x1.vue";
 import card_2x1 from "./components/card_2x1.vue";
 import article_list from "./components/article_list.vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 // function colorStyleGen(color) {
 //   return (
@@ -182,11 +190,10 @@ import article_list from "./components/article_list.vue";
 //   );
 // }
 
-const info = {
-  // for system
-  width: 0,
-  flag: false,
+const width = ref(0);
+const flag = ref(false);
 
+const info = ref({
   title: "idealclover",
   desc: "Stay simple, stay naive.",
   imgUrl: "https://cdn.idealclover.cn/Projects/homepage/icon.png",
@@ -199,7 +206,14 @@ const info = {
     bgStyle:
       "bg-primary shadow-accent hover:bg-primary-focus hover:shadow-gray-500",
     btnText: "了解更多",
-    // btnText: "我的简历",
+  },
+  cvTitleCard: {
+    title: "翠翠 @idealclover",
+    desc: "Project Manager @Bytedance\n产品经理/独立开发者/个人博主/Vocaloid",
+    url: "https://idealclover.top/about.html",
+    bgStyle:
+      "bg-primary shadow-accent hover:bg-primary-focus hover:shadow-gray-500 whitespace-pre-line",
+    btnText: "查看简历",
   },
   blogCard: {
     title: "博客",
@@ -493,17 +507,11 @@ const info = {
       textStyle: "font-normal",
     },
   ],
-};
+});
 
-// function getFollower() {
-//   console.log(this.primaryCards);
-
-//   for (item in this.primaryCards) {
-//     Vue.axios.get(item.updateUrl).then((response) => {
-//       console.log(response.data);
-//     });
-//   }
-// }
+// 按需加载高德地图组件 tmd 要不太拖累性能了
+window.addEventListener("resize", handleResize);
+handleResize();
 
 window.init = function () {
   var map = new AMap.Map("map-container", {
@@ -512,41 +520,34 @@ window.init = function () {
   });
 };
 
-export default {
-  components: { card_4x2, card_2x2, card_8x1, card_2x1, article_list },
-  data() {
-    return info;
-  },
-  mounted() {
-    for (let i = 0; i < this.primaryCards.length; i++) {
-      fetch(this.primaryCards[i].updateUrl, {
-        headers: { "Content-type": "application/json" },
-      })
-        .then((res) => res.json())
-        .then((response) => {
-          this.primaryCards[i].btnText =
-            this.primaryCards[i].btnText + " " + response.count;
-        });
-    }
-  },
-  // 按需加载高德地图组件 tmd 要不太拖累性能了
-  created() {
-    window.addEventListener("resize", this.handleResize);
-    this.handleResize();
-  },
-  destroyed() {
-    window.removeEventListener("resize", this.handleResize);
-  },
-  methods: {
-    handleResize() {
-      this.width = window.innerWidth;
-      if (!this.flag && this.width > 768) {
-        var newScript = document.createElement("script");
-        newScript.src = "https://webapi.amap.com/maps?v=1.4.15&callback=init";
-        document.head.appendChild(newScript);
-        this.flag = true;
-      }
-    },
-  },
-};
+onMounted(() => {
+  for (let i = 0; i < info.value.primaryCards.length; i++) {
+    fetch(info.value.primaryCards[i].updateUrl, {
+      headers: { "Content-type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        info.value.primaryCards[i].btnText =
+          info.value.primaryCards[i].btnText + " " + response.count;
+      });
+  }
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", handleResize);
+});
+
+function handleResize() {
+  width.value = window.innerWidth;
+  if (!flag.value && width.value >= 768) {
+    var newScript = document.createElement("script");
+    newScript.src = "https://webapi.amap.com/maps?v=1.4.15&callback=init";
+    document.head.appendChild(newScript);
+    flag.value = true;
+  }
+
+  if (flag.value && width.value < 768) {
+    flag.value = false;
+  }
+}
 </script>
