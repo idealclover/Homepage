@@ -152,7 +152,7 @@
               bento.me
             </a>
           </div>
-          <div>
+          <!-- <div>
             <a
               href="https://beian.miit.gov.cn"
               target="_blank"
@@ -160,7 +160,7 @@
             >
               苏ICP备19010018号
             </a>
-          </div>
+          </div> -->
         </footer>
         <div class="pt-10"></div>
       </main>
