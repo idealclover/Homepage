@@ -73,6 +73,11 @@ const articlesList = [
     url: "https://idealclover.top/category/blog",
     articles: [
       {
+        title: "用AI为Typecho博客文章生成摘要吧！",
+        url: "https://idealclover.top/archives/636",
+        time: "2023.12.03",
+      },
+      {
         title: "Caritas APP 2.0 版本发布",
         url: "https://idealclover.top/archives/635",
         time: "2022.08.21",
@@ -91,12 +96,7 @@ const articlesList = [
         title: "2020 年，或许你应当试试这样记笔记",
         url: "https://idealclover.top/archives/625",
         time: "2020.06.14",
-      },
-      {
-        title: "南哪指南 - 南大人的专属浏览器主页",
-        url: "https://idealclover.top/archives/623",
-        time: "2020.05.18",
-      },
+      }
     ],
   },
   {
