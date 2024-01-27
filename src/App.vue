@@ -158,7 +158,7 @@
               target="_blank"
               class="text-gray-400"
             >
-              苏ICP备19010018号
+              京ICP备2024045824号
             </a>
           </div> -->
         </footer>
