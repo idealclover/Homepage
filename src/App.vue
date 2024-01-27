@@ -61,7 +61,7 @@
 
           <div
             v-if="width >= 768"
-            class="col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative"
+            class="col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative md:aspect-[1/1]"
           >
             <div
               class="rounded-xl shadow-xl shadow-accent hover:shadow-gray-500 w-full h-full lg:w-[26rem] lg:h-[26rem] absolute"
