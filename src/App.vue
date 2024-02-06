@@ -155,10 +155,21 @@
           <!-- <div>
             <a
               href="https://beian.miit.gov.cn"
+              rel="noreferrer"
               target="_blank"
               class="text-gray-400"
             >
               京ICP备2024045824号
+            </a>
+          </div>
+          <div>
+            <a
+              href="https://beian.mps.gov.cn/#/query/webSearch?code=11010502054688"
+              rel="noreferrer"
+              target="_blank"
+              class="text-gray-400"
+            >
+              京公网安备11010502054688号
             </a>
           </div> -->
         </footer>
