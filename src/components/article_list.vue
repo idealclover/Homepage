@@ -96,13 +96,18 @@ const articlesList = [
         title: "2020 年，或许你应当试试这样记笔记",
         url: "https://idealclover.top/archives/625",
         time: "2020.06.14",
-      }
+      },
     ],
   },
   {
     title: "生活",
     url: "https://idealclover.top/category/life",
     articles: [
+      {
+        title: "2021-2023年终总结：跃入人海，潮起潮落",
+        url: "https://idealclover.top/archives/637",
+        time: "2024.02.23",
+      },
       {
         title: "再见了，大小周",
         url: "https://idealclover.top/archives/629",
@@ -123,17 +128,17 @@ const articlesList = [
         url: "https://idealclover.top/archives/609",
         time: "2020.02.29",
       },
-      {
-        title: "博客建立 1000 天纪念：一个自说自话的故事",
-        url: "https://idealclover.top/archives/607",
-        time: "2020.02.23",
-      },
     ],
   },
   {
     title: "随想",
     url: "https://idealclover.top/category/thinking",
     articles: [
+      {
+        title: "2021-2023年终总结：跃入人海，潮起潮落",
+        url: "https://idealclover.top/archives/637",
+        time: "2024.02.23",
+      },
       {
         title: "2020 年年终总结：致即将 22 岁的自己",
         url: "https://idealclover.top/archives/627",
@@ -153,11 +158,6 @@ const articlesList = [
         title: "我看好 Fluent Design，但不看好微软",
         url: "https://idealclover.top/archives/615",
         time: "2020.04.12",
-      },
-      {
-        title: "身份、立场与偏见：为什么互联网愈发 “水火不容”",
-        url: "https://idealclover.top/archives/614",
-        time: "2020.04.03",
       },
     ],
   },
