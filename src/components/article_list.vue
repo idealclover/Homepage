@@ -1,13 +1,13 @@
 <template>
   <div
-    class="card rounded-2xl shadow-xl shadow-accent hover:shadow-gray-500 bg-primary w-full lg:w-[54rem] min-h-[26rem] mb-8"
+    class="card max-lg:card-compact rounded-2xl shadow-xl shadow-accent hover:shadow-gray-500 bg-primary w-full lg:w-[54rem] min-h-[26rem] mb-8"
   >
     <div class="card-body">
       <div class="pt-2"></div>
 
       <div class="tabs tabs-boxed rounded-xl max-sm:py-2">
         <div
-          class="tab tab-sm sm:tab-lg"
+          class="max-sm:px-2 tab tab-sm sm:tab-lg"
           v-for="(articleList, index) in articlesList"
           :key="articleList.title"
           :class="tabIndex == index ? 'tab-active' : ''"
@@ -68,6 +68,37 @@
 
 <script>
 const articlesList = [
+  {
+    title: "最新",
+    url: "https://idealclover.top/articles.html",
+    articles: [
+      {
+        title: "2021-2023年终总结：跃入人海，潮起潮落",
+        url: "https://idealclover.top/archives/637",
+        time: "2024.02.23",
+      },
+      {
+        title: "用AI为Typecho博客文章生成摘要吧！",
+        url: "https://idealclover.top/archives/636",
+        time: "2023.12.03",
+      },
+      {
+        title: "Caritas APP 2.0 版本发布",
+        url: "https://idealclover.top/archives/635",
+        time: "2022.08.21",
+      },
+      {
+        title: "友链屋 - 建个网站订阅友链们的更新～",
+        url: "https://idealclover.top/archives/634",
+        time: "2022.05.22",
+      },
+      {
+        title: "为博客添加 COVID-19 疫情地图",
+        url: "https://idealclover.top/archives/632",
+        time: "2022.05.04",
+      },
+    ],
+  },
   {
     title: "技术",
     url: "https://idealclover.top/category/blog",
