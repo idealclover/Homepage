@@ -12,63 +12,43 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="翠翠的个人名片👋" />
     <meta property="og:url" content="https://idealclover.cn" />
-    <meta
-      property="og:image"
-      content="https://cdn.idealclover.cn/Projects/homepage/cover.png"
-    />
+    <meta property="og:image" content="icons/cover.png" />
     <link
       rel="preload"
-      href="https://image.idealclover.cn/projects/Homepage/assets/font.woff"
+      href="/fonts/MaoKenZhuYuanTi.ttf"
       as="font"
-      type="font/woff"
+      type="font/ttf"
       crossorigin
     />
-    <link
-      rel="preload"
-      href="https://cdn.idealclover.cn/Projects/homepage/icons.png"
-      as="image"
-      type="image/png"
-    />
-    <link
-      rel="shortcut icon"
-      href="https://cdn.idealclover.cn/Projects/homepage/favicon.ico"
-    />
+    <link rel="preload" href="/icons/icons.png" as="image" type="image/png" />
+    <link rel="shortcut icon" href="/favicons/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="https://cdn.idealclover.cn/Projects/homepage/apple-touch-icon.png"
+      href="/favicons/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="https://cdn.idealclover.cn/Projects/homepage/favicon-32x32.png"
+      href="/favicons/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="https://cdn.idealclover.cn/Projects/homepage/favicon-16x16.png"
+      href="/favicons/favicon-16x16.png"
     />
-    <link
-      rel="manifest"
-      href="https://image.idealclover.cn/projects/Homepage/assets/site.webmanifest"
-    />
+    <link rel="manifest" href="/favicons/site.webmanifest" />
     <link rel="dns-prefetch" href="//idealclover.top" />
   </head>
   <body>
     <div style="display: none">
-      <img
-        src="https://cdn.idealclover.cn/Projects/homepage/cover.png"
-        alt=""
-      />
+      <img src="/icons/cover.png" alt="" />
     </div>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
-    <script
-      defer
-      src="https://cdn.idealclover.cn/Projects/homepage/mouse-click.js"
-    ></script>
+    <script defer src="/libs/mouse-click.js"></script>
 
     <!-- heap analysics -->
     <script type="text/javascript">
@@ -128,5 +108,18 @@
 
       gtag("config", "G-EPS8XLSB6V");
     </script>
+    <!-- <script>
+      if ("serviceWorker" in navigator) {
+        console.log("Will the service worker register?");
+        navigator.serviceWorker
+          .register("https://idealclover.top/sw.js")
+          .then(function (reg) {
+            console.log("Yes, it did.");
+          })
+          .catch(function (err) {
+            console.log("No it did not. This happened: ", err);
+          });
+      }
+    </script> -->
   </body>
 </html>

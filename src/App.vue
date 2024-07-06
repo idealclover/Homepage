@@ -213,7 +213,6 @@ const info = ref({
     title: "翠翠 @idealclover",
     desc: "产品经理/独立开发者/个人博主/Vocaloid",
     url: "https://idealclover.top/about.html",
-    // url: "https://cdn.idealclover.cn/Projects/homepage/resume.pdf",
     bgStyle:
       "bg-primary shadow-accent hover:bg-primary-focus hover:shadow-gray-500",
     btnText: "了解更多",
@@ -241,25 +240,21 @@ const info = ref({
     {
       title: "即刻",
       url: "https://web.okjike.com/u/e2ede1ee-79e6-420b-92fc-9983566db44c",
-      // iconUrl: "https://cdn.idealclover.cn/Projects/homepage/jike.png",
       iconClass: "jike",
     },
     {
       title: "酷安",
       url: "https://www.coolapk.com/u/999081",
-      // iconUrl: "https://cdn.idealclover.cn/Projects/homepage/coolapk.svg",
       iconClass: "coolapk",
     },
     {
       title: "少数派",
       url: "https://sspai.com/u/idealclover",
-      // iconUrl: "https://cdn.idealclover.cn/Projects/homepage/sspai.svg",
       iconClass: "sspai",
     },
     {
       title: "Steam",
       url: "https://steamcommunity.com/id/idealclover",
-      // iconUrl: "https://cdn.idealclover.cn/Projects/homepage/Steam.svg",
       iconClass: "Steam",
     },
   ],
@@ -267,7 +262,6 @@ const info = ref({
     {
       title: "知乎",
       url: "https://www.zhihu.com/people/cuicuijiang",
-      // bgStyle: "bg-[#0275D2] hover:bg-[#0275D2]/75",
       bgStyle:
         "bg-[#0275D2] shadow-[#0275D2]/75 hover:bg-[#0275D2]/75 hover:shadow-[#0275D2]",
       btnText: "Follow",
@@ -365,9 +359,6 @@ const info = ref({
       btnText: "1M+ 👤",
       bgStyle:
         "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
-      // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_mask_2.jpg')] bg-cover",
-      // btnStyle: "bg-[#162D3B]",
-      // btnTextStyle: "text-white",
     },
     {
       title: "毕业帽头像",
@@ -376,9 +367,6 @@ const info = ref({
       btnText: "1K+ 👤",
       bgStyle:
         "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
-      // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_bachelor.png')] bg-cover",
-      // btnStyle: "bg-[#162D3B]",
-      // btnTextStyle: "text-white",
     },
     {
       title: "可配置打赏页",
@@ -386,10 +374,7 @@ const info = ref({
       url: "https://donate.idealclover.cn",
       btnText: "62 ✨",
       bgStyle:
-        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
-      // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover",
-      // btnStyle: "bg-[#162D3B]",
-      // btnTextStyle: "text-white",
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500"
     },
     {
       title: "可配置下载页",
@@ -397,17 +382,13 @@ const info = ref({
       url: "https://nju.app",
       btnText: "32 ✨",
       bgStyle:
-        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
-      // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover",
-      // btnStyle: "bg-[#162D3B]",
-      // btnTextStyle: "text-white",
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500"
     },
     {
       title: "Caritas APP",
       desc: "优质文章整理",
       url: "https://zhuanlan.zhihu.com/p/556201282",
       btnText: "900+ 👍",
-      // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover",
       textStyle: "text-white",
       btnStyle: "bg-[#FEAD68] hover:bg-[#FFCC96]",
       btnTextStyle: "text-white",
@@ -419,7 +400,6 @@ const info = ref({
       desc: "小程序版本博客",
       url: "https://idealclover.top/archives/613",
       btnText: "118 ✨",
-      // bgStyle: "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover",
       textStyle: "text-white",
       btnStyle: "bg-[#54E236] hover:bg-[#84F675]",
       btnTextStyle: "text-white",
@@ -488,7 +468,6 @@ const info = ref({
     {
       title: "Email: idealclover@163.com",
       url: "mailto:idealclover@163.com",
-      // iconUrl: "https://image.idealclover.cn/blog/assets/icons/mail.png",
       iconClass: "mail_s",
       iconInfoClass: "mail",
       textStyle: "font-normal",
@@ -496,7 +475,6 @@ const info = ref({
     {
       title: "QQ: 1455169173",
       url: "http://wpa.qq.com/msgrd?v=3&uin=1455169173&site=qq&menu=yes",
-      // iconUrl: "https://image.idealclover.cn/blog/assets/icons/QQ.png",
       iconClass: "QQ_s",
       iconInfoClass: "QQ",
       textStyle: "font-normal",
@@ -504,7 +482,6 @@ const info = ref({
     {
       title: "Telegram: @idealclover",
       url: "http://t.me/idealclover",
-      // iconUrl: "https://image.idealclover.cn/blog/assets/icons/telegram.png",
       iconClass: "telegram_s",
       iconInfoClass: "telegram",
       textStyle: "font-normal",
@@ -512,7 +489,6 @@ const info = ref({
     {
       title: "Twitter: @idealclover",
       url: "https://twitter.com/idealclover",
-      // iconUrl: "https://image.idealclover.cn/blog/assets/icons/twitter.png",
       iconClass: "twitter_s",
       iconInfoClass: "twitter",
       textStyle: "font-normal",
