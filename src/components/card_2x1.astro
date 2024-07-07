@@ -1,0 +1,57 @@
+---
+interface Props {
+  info: {
+    title: string;
+    url: string;
+    iconClass: string;
+    textStyle?: string;
+  };
+}
+
+const { info } = Astro.props;
+---
+
+<a href={info.url} target="_blank">
+  <div
+    class="card max-lg:card-compact rounded-xl flex justify-center shadow-xl shadow-accent bg-primary hover:bg-primary-focus hover:shadow-gray-500 w-full lg:w-[26rem] lg:h-[5rem] mb-8"
+  >
+    <div class="card-body">
+      <div class="flex">
+        <div class:list={[info.iconClass, "w-8", "h-8", "mr-2"]}></div>
+        <h2
+          class:list={[
+            info.textStyle,
+            "card-title",
+            "max-lg:text-sm",
+            "whitespace-nowrap",
+          ]}
+        >
+          {info.title}
+        </h2>
+      </div>
+    </div>
+  </div>
+</a>
+
+<style>
+  .jike {
+    background: url("/icons/icons.png") -256px -0px no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+  .coolapk {
+    background: url("/icons/icons.png") -288px -0px no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+  .sspai {
+    background: url("/icons/icons.png") -320px -0px no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+  .Steam {
+    background: url("/icons/icons.png") -352px -0px no-repeat;
+    width: 32px;
+    height: 32px;
+  }
+</style>

@@ -7,11 +7,16 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+
+    "tailwind": "node build/tailwind.js"
   },
   "dependencies": {
-    "astro": "^4.11.5",
     "@astrojs/check": "^0.7.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.11.5",
+    "daisyui": "^4.12.10",
+    "tailwindcss": "^3.4.4",
     "typescript": "^5.5.3"
   }
 }

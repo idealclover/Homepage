@@ -1,0 +1,40 @@
+---
+interface Props {
+  info: {
+    title: string;
+    desc?: string;
+    url: string;
+    btnText: string;
+    bgStyle: string;
+    btnStyle?: string;
+    textStyle?: string;
+    btnTextStyle?: string;
+    updateUrl?: string;
+  };
+}
+
+const { info } = Astro.props;
+---
+
+<a href={info.url} target="_blank">
+  <div
+    class:list={["card max-lg:card-compact rounded-2xl shadow-xl w-full max-sm:aspect-[1/1] md:aspect-[1/1] lg:w-[12rem] lg:h-[12rem] mb-8", info.bgStyle]}
+  >
+    <div class="card-body w-full h-full">
+      <h2
+        class:list={[info.textStyle, "card-title text-base sm:text-xl whitespace-nowrap"]}
+      >
+        {info.title}
+      </h2>
+      <p class={info.textStyle}>{info.desc}</p>
+      <div class="h-full"></div>
+      <div class="card-actions justify-end">
+        <button
+          class:list={[info.btnStyle, info.btnTextStyle, "btn btn-sm rounded-xl capitalize border-0 max-w-full whitespace-nowrap"]}
+        >
+          {info.btnText}
+        </button>
+      </div>
+    </div>
+  </div>
+</a>
