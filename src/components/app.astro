@@ -3,6 +3,7 @@ import Card_2x1 from "./card_2x1.astro";
 import Card_2x2 from "./card_2x2.astro";
 import Card_4x2 from "./card_4x2.astro";
 import Card_8x1 from "./card_8x1.astro";
+import Articles_List from "./articles_list.astro";
 import info from "../data/info";
 const showCV = false;
 ---
@@ -61,8 +62,8 @@ const showCV = false;
         </div>
 
         <div
-          v-if="width >= 768"
-          class="col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative md:aspect-[1/1]"
+          style="display: none"
+          class="map col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative md:aspect-[1/1]"
         >
           <div
             class="rounded-xl shadow-xl shadow-accent hover:shadow-gray-500 w-full h-full lg:w-[26rem] lg:h-[26rem] absolute"
@@ -79,7 +80,7 @@ const showCV = false;
         <!-- 文章列表 -->
         <div class="col-span-4">
           <Card_8x1 info={info.sectionTitles[0]} />
-          <article_list></article_list>
+          <Articles_List></Articles_List>
         </div>
 
         <!-- 个人项目 -->
@@ -224,3 +225,21 @@ const showCV = false;
     height: 32px;
   }
 </style>
+
+<script>
+  // 更新粉丝数
+  import updateInfo from "../data/update.js";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateInfo.forEach((item) => {
+      fetch(item.updateUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          const element = document.querySelector(`.${item.className}`);
+          if (data.count == null) return;
+          if (element) element.textContent += " " + data.count;
+        })
+        .catch((error) => console.error("Error:", error));
+    });
+  });
+</script>

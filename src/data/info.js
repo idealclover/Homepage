@@ -60,9 +60,8 @@ export default {
         "bg-[#0275D2] shadow-[#0275D2]/75 hover:bg-[#0275D2]/75 hover:shadow-[#0275D2]",
       btnText: "Follow",
       textStyle: "text-white",
-      btnStyle: "bg-[#3A91EC] hover:bg-[#78B0F9]",
+      btnStyle: "zhihu bg-[#3A91EC] hover:bg-[#78B0F9]",
       btnTextStyle: "text-white",
-      updateUrl: "https://api.swo.moe/stats/zhihu/cuicuijiang",
     },
     {
       title: "Bilibili",
@@ -70,10 +69,9 @@ export default {
       btnText: "Follow",
       bgStyle:
         "bg-[#FB7299] shadow-[#FB7299]/75 hover:bg-[#FB7299]/75 hover:shadow-[#FB7299]",
-      btnStyle: "bg-[#FD91AA] hover:bg-[#FEB2BF]",
+      btnStyle: "bili bg-[#FD91AA] hover:bg-[#FEB2BF]",
       textStyle: "text-white",
       btnTextStyle: "text-white",
-      updateUrl: "https://api.swo.moe/stats/bilibili/5044093",
     },
     {
       title: "GitHub",
@@ -81,10 +79,9 @@ export default {
       btnText: "Follow",
       bgStyle:
         "bg-[#181717] shadow-[#181717]/75 hover:bg-[#181717]/75 hover:shadow-[#181717]",
-      btnStyle: "bg-[#4F4A4A] hover:bg-[#9D9796]",
+      btnStyle: "github bg-[#4F4A4A] hover:bg-[#9D9796]",
       textStyle: "text-white",
       btnTextStyle: "text-white",
-      updateUrl: "https://api.swo.moe/stats/github/idealclover",
     },
     {
       title: "网易云",
@@ -92,10 +89,9 @@ export default {
       btnText: "Follow",
       bgStyle:
         "bg-[#C20B0D] shadow-[#C20B0D]/75 hover:bg-[#C20B0D]/75 hover:shadow-[#C20B0D]",
-      btnStyle: "bg-[#E54141] hover:bg-[#F77D7D]",
+      btnStyle: "netease bg-[#E54141] hover:bg-[#F77D7D]",
       textStyle: "text-white",
       btnTextStyle: "text-white",
-      updateUrl: "https://api.swo.moe/stats/neteasemusic/78983390",
     },
   ],
   sectionTitles: [
