@@ -1,6 +1,5 @@
 ---
 import App from "../components/app.astro";
-const absoluteUrl = `${Astro.site}`;
 ---
 
 <!doctype html>
@@ -46,15 +45,17 @@ const absoluteUrl = `${Astro.site}`;
     />
     <link rel="manifest" href=`${Astro.site}/favicons/site.webmanifest` />
     <link rel="dns-prefetch" href="//idealclover.top" />
+    <!-- TODO:这儿有点儿丑.. -->
     <style>
       @font-face {
         font-family: "MaokenZhuyuanTi";
-        src: url(`${Astro.site}/fonts/MaoKenZhuYuanTi.ttf`);
+        src: url(https://image.idealclover.cn/projects/Homepage/fonts/MaoKenZhuYuanTi.ttf);
         font-display: swap;
       }
 
       body {
-        cursor: url(`${Astro.site}/icons/cursor.ico`), auto;
+        cursor: url(https://image.idealclover.cn/projects/Homepage/icons/cursor.ico),
+          auto;
         font-family: "MaokenZhuyuanTi";
       }
     </style>

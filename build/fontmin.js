@@ -38,8 +38,8 @@ function scanDirectory(dir) {
 // 生成最终的 HTML 代码
 function generateFinalHTML(finalString) {
 	const fontmin = new Fontmin()
-		.src("../public/fonts/*.ttf") // 源字体文件路径
-		.dest("../dist/fonts") // 压缩后文件存放路径，最终使用的是这个压缩后的文件
+		.src("./public/fonts/*.ttf") // 源字体文件路径
+		.dest("./dist/fonts") // 压缩后文件存放路径，最终使用的是这个压缩后的文件
 		.use(
 			Fontmin.glyph({
 				text: finalString, // 也可以直接指定需要生成的字符集

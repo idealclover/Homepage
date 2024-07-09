@@ -46,7 +46,6 @@ async function main() {
   const regex = /<script is:inline>.*<\/script>\n\s*<\/body>\n\s*<\/html>/;
   const replacement = `<script is:inline>${initContent}</script>\n  <\/body>\n</html>`;
   astroContent = astroContent.replace(regex, replacement);
-
   // 写回 index.astro 文件
   fs.writeFileSync(astroPath, astroContent, 'utf8');
 
