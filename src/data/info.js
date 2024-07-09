@@ -114,8 +114,7 @@ export default {
     url: "https://nju.app",
     btnText: "https://nju.app",
     bgStyle:
-      "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_nnkb_2.jpg')] bg-cover bg-center shadow-blog/75 hover:shadow-blog",
-    textStyle: "text-black whitespace-pre-line",
+      "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_nnkb_2.jpg')] bg-cover bg-center shadow-[#2C3E50]/75 hover:shadow-[#2C3E50]",
     btnStyle: "glass",
     btnTextStyle: "text-black lowercase",
   },
@@ -187,7 +186,7 @@ export default {
     },
     {
       title: "Unitypecho",
-      desc: "小程序版本博客",
+      desc: "小程序版博客",
       url: "https://idealclover.top/archives/613",
       btnText: "118 ✨",
       textStyle: "text-white",

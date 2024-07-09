@@ -6,47 +6,59 @@ import articlesList from "../data/articles_list.js";
   class="card max-lg:card-compact rounded-2xl shadow-xl shadow-accent hover:shadow-gray-500 bg-primary w-full lg:w-[54rem] min-h-[26rem] mb-8"
 >
   <div class="card-body">
-    <div class="pt-2"></div>
-
-    <div class="tabs tabs-boxed rounded-xl max-sm:py-2">
+    <div
+      role="tablist"
+      class="tabs tabs-bordered rounded-xl max-sm:py-2 sm:tabs-lg"
+    >
       {
-        articlesList.map((articles) => (
-          <div class="max-sm:px-2 tab tab-sm sm:tab-lg">{articles.title}</div>
-        ))
-      }
-    </div>
+        articlesList.map((articles, index) => (
+          <>
+            <input
+              type="radio"
+              name="articles-tabs"
+              id={`tab-${index}`}
+              role="tab"
+              class="max-sm:px-2 tab whitespace-nowrap"
+              aria-label={articles.title}
+              checked={index === 0}
+            />
+            <div
+              role="tabpanel"
+              class="tab-content"
+              aria-labelledby={`tab-${index}`}
+            >
+              {articles.articles.map((article) => (
+                <a
+                  class="card card-compact rounded-xl bg-base-200 mt-2"
+                  href={article.url}
+                  target="_blank"
+                >
+                  <div class="card-body">
+                    <div class="text-base md:text-xl sm:flex sm:justify-between">
+                      {article.title}
+                      <div class="inline-block float-right text-gray-500">
+                        {article.time}
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              ))}
 
-    <div class="pt-1"></div>
+              <div class="pt-2" />
 
-    {
-      articlesList[0].articles.map((article) => (
-        <a
-          class="card card-compact rounded-xl bg-base-200"
-          href={article.url}
-          target="_blank"
-        >
-          <div class="card-body">
-            <div class="text-base md:text-xl sm:flex sm:justify-between">
-              {article.title}
-              <div class="inline-block float-right text-gray-500">
-                {article.time}
+              <div class="card-actions justify-end">
+                <a
+                  class="btn btn-md btn-wide rounded-xl capitalize border-0 max-w-full text-xl"
+                  href={articles.url}
+                  target="_blank"
+                >
+                  查看更多
+                </a>
               </div>
             </div>
-          </div>
-        </a>
-      ))
-    }
-
-    <div class="pt-1"></div>
-
-    <div class="card-actions justify-end">
-      <a
-        class="btn btn-md btn-wide rounded-xl capitalize border-0 max-w-full"
-        href={articlesList[0].url}
-        target="_blank"
-      >
-        查看更多
-      </a>
+          </>
+        ))
+      }
     </div>
   </div>
 </div>

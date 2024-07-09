@@ -3,13 +3,14 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
+    "dev": "npm run inline && astro dev",
+    "start": "npm run inline && astro dev",
+    "build": "npm run inline && astro check && astro build && node build/fontmin.js",
     "preview": "astro preview",
     "astro": "astro",
 
-    "tailwind": "node build/tailwind.js"
+    "inline": "node build/inline.js",
+    "fontmin": "node build/fontmin.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
@@ -18,5 +19,9 @@
     "daisyui": "^4.12.10",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.3"
+  },
+  "devDependencies": {
+    "fontmin": "^1.1.0",
+    "terser": "^5.31.1"
   }
 }

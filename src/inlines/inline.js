@@ -25,6 +25,17 @@ function loadScript() {
       });
     };
     isLoaded = true;
+    return;
+  }
+
+  if (isLoaded) {
+    if (window.innerWidth <= 768) {
+      const element = document.querySelector(".map");
+      element.style.display = "none";
+    } else {
+      const element = document.querySelector(".map");
+      element.style.display = "block";
+    }
   }
 }
 
