@@ -87,7 +87,7 @@ function gtag() {
 }
 gtag("js", new Date());
 
-gtag("config", "G-W8NZX8HDXQ");
+gtag("config", "G-EPS8XLSB6V");
 
 /// sw.js
 if ("serviceWorker" in navigator) {
