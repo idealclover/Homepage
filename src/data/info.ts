@@ -96,16 +96,16 @@ export default {
   ],
   sectionTitles: [
     {
-      title: "博客文章",
+      title: "📝 博客文章",
     },
     {
-      title: "个人项目",
+      title: "🗃️ 个人项目",
     },
     {
-      title: "音乐创作",
+      title: "🎼 音乐创作",
     },
     {
-      title: "与我联系",
+      title: "📫 与我联系",
     },
   ],
   projectCardStart: {

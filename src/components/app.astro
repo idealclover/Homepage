@@ -43,7 +43,7 @@ import info from "../data/info";
 
     <main>
       <div class="pt-20"></div>
-      <div class="grid grid-cols-4 gap-x-8 lg:w-[54rem]">
+      <div class="grid grid-cols-4 gap-x-4 lg:gap-x-8 lg:w-[54rem]">
         <div class="col-span-4 md:col-span-2">
           <Card_4x2 info={info.titleCard} />
           <Card_4x2 info={info.blogCard} />
@@ -204,7 +204,7 @@ import info from "../data/info";
 
 <script>
   // 更新粉丝数
-  import updateInfo from "../data/update.js";
+  import updateInfo from "../data/update";
 
   document.addEventListener("DOMContentLoaded", () => {
     updateInfo.forEach((item) => {
