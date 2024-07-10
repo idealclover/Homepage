@@ -22,7 +22,7 @@ updatedIndexHtml = updatedIndexHtml.replaceAll(gtags["moe"], gtags[mode]);
 
 // 非cn场景删除备案信息
 if(mode !== "cn") {
-  const beian = /\<div.*京.*号.*京.*号.*\<\/div\>/;
+  const beian = /\<div class="beian".*?京.*号.*京.*号.*\<\/div\>/;
   updatedIndexHtml = updatedIndexHtml.replace(beian, "")
 }
 
