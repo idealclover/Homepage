@@ -115,6 +115,7 @@ export default {
     btnText: "https://nju.app",
     bgStyle:
       "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_nnkb_2.jpg')] bg-cover bg-center shadow-[#2C3E50]/75 hover:shadow-[#2C3E50]",
+    textStyle: "text-black",
     btnStyle: "glass",
     btnTextStyle: "text-black lowercase",
   },
