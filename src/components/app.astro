@@ -137,24 +137,24 @@ import info from "../data/info";
   </div>
 </div>
 
-<style>
+<style define:vars={{ url: `url(${Astro.site}/icons/icons.png)` }}>
   .mail {
-    background: url("/icons/icons.png") -0px -0px no-repeat;
+    background: var(--url) -0px -0px no-repeat;
     width: 64px;
     height: 64px;
   }
   .QQ {
-    background: url("/icons/icons.png") -64px -0px no-repeat;
+    background: var(--url) -64px -0px no-repeat;
     width: 64px;
     height: 64px;
   }
   .telegram {
-    background: url("/icons/icons.png") -128px -0px no-repeat;
+    background: var(--url) -128px -0px no-repeat;
     width: 64px;
     height: 64px;
   }
   .twitter {
-    background: url("/icons/icons.png") -192px -0px no-repeat;
+    background: var(--url) -192px -0px no-repeat;
     width: 64px;
     height: 64px;
   }
