@@ -1,12 +1,5 @@
 // 这里的js通过minify后直接给到index.astro
 
-//  Google tag (gtag.js)
-//  cn 还需要改备案
-//  top 还需要改sw
-//  cn W8NZX8HDXQ
-//  top K3RTHCN381
-//  moe EPS8XLSB6V
-
 /// 按需加载地图
 let isLoaded = false;
 let scriptElement = null;
@@ -79,6 +72,13 @@ window.addEventListener("resize", loadScript);
       heap[p[o]] = n(p[o]);
   });
 heap.load("3744982711");
+
+//  Google tag (gtag.js)
+//  cn 还需要改备案
+//  top 还需要改sw
+//  cn W8NZX8HDXQ
+//  top K3RTHCN381
+//  moe EPS8XLSB6V
 
 /// gtag
 window.dataLayer = window.dataLayer || [];

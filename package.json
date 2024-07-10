@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "npm run inline && astro dev",
     "start": "npm run inline && astro dev",
-    "build": "npm run inline && astro check && astro build && node build/fontmin.js",
+    "build": "npm run inline && astro check && astro build && npm run fontmin && npm run csspath",
     "preview": "astro preview",
     "astro": "astro",
 
-    "inline": "node build/inline.js",
-    "fontmin": "node build/fontmin.js"
+    "inline": "node build/inlinejs",
+    "fontmin": "node build/fontmin",
+    "csspath": "node build/csspath"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",

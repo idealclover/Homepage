@@ -3,9 +3,9 @@ import path from 'path';
 import { minify } from 'terser';
 
 async function main() {
-  // 读取 init.js 文件
-  const initPath = path.resolve('./src/inlines/inline.js');
-  let initContent = fs.readFileSync(initPath, 'utf8');
+  // 读取 inline.js 文件
+  const inlinePath = path.resolve('./src/inlines/inline.js');
+  let inlineContent = fs.readFileSync(inlinePath, 'utf8');
 
   // 使用 terser 进行 minify
   async function purgeContent(content) {
@@ -35,16 +35,16 @@ async function main() {
     return result.code;
   }
 
-  // 处理 init.js 内容
-  initContent = await purgeContent(initContent);
+  // 处理 inline.js 内容
+  inlineContent = await purgeContent(inlineContent);
 
   // 读取 index.astro 文件
   const astroPath = path.resolve('./src/pages/index.astro');
   let astroContent = fs.readFileSync(astroPath, 'utf8');
 
   // 替换最后一个 <script is:inline/> 元素
-  const regex = /<script is:inline>.*<\/script>\n\s*<\/body>\n\s*<\/html>/;
-  const replacement = `<script is:inline>${initContent}</script>\n  <\/body>\n</html>`;
+  const regex = /<script is:inline>.*<\/script>/;
+  const replacement = `<script is:inline>${inlineContent}</script>`;
   astroContent = astroContent.replace(regex, replacement);
   // 写回 index.astro 文件
   fs.writeFileSync(astroPath, astroContent, 'utf8');
