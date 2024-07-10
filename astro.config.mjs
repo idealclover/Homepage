@@ -12,5 +12,5 @@ export default defineConfig({
   site: 'https://image.idealclover.cn/projects/Homepage',
 
   // mode: 不同的网站 cn/top/moe
-  siteMode: "top"
+  siteMode: "moe"
 });
