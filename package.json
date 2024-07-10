@@ -3,15 +3,15 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "npm run inline && astro dev",
-    "start": "npm run inline && astro dev",
-    "build": "npm run inline && astro check && astro build && npm run fontmin && npm run csspath",
+    "dev": "npm run prebuild && astro dev",
+    "start": "npm run prebuild && astro dev",
+    "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
 
-    "inline": "node build/inlinejs",
+    "prebuild": "node build/prebuild",
     "fontmin": "node build/fontmin",
-    "csspath": "node build/csspath"
+    "postbuild": "npm run fontmin && node build/postbuild"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",

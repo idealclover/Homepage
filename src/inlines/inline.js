@@ -74,13 +74,6 @@ window.addEventListener("resize", loadScript);
 heap.load("3744982711");
 
 //  Google tag (gtag.js)
-//  cn 还需要改备案
-//  top 还需要改sw
-//  cn W8NZX8HDXQ
-//  top K3RTHCN381
-//  moe EPS8XLSB6V
-
-/// gtag
 window.dataLayer = window.dataLayer || [];
 function gtag() {
   dataLayer.push(arguments);
