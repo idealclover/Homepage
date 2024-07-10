@@ -9,7 +9,7 @@ const indexHtml = fs.readFileSync(indexHtmlPath, "utf-8");
 
 // updateCSSPaths
 const regex = /\/_astro\/(.*)\.css/;
-let updatedIndexHtml = indexHtml.replace(regex, `${site}/_astro/$1.min.css`);
+let updatedIndexHtml = indexHtml.replace(regex, `${site}/_astro/$1.css`);
 
 // change gtag by mode
 const gtags = {
