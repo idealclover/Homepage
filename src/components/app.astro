@@ -1,0 +1,179 @@
+---
+import Card_2x1 from "./card_2x1.astro";
+import Card_2x2 from "./card_2x2.astro";
+import Card_4x2 from "./card_4x2.astro";
+import Card_8x1 from "./card_8x1.astro";
+import Articles_List from "./articles_list.astro";
+import info from "../data/info";
+// const showCV = false;
+---
+<div class="container m-auto lg:max-xl:w-min main">
+  <div class="xl:flex xl:flex-row xl:justify-between max-w-screen-2xl px-10">
+    <aside
+      class="min-w-full md:min-w-0 xl:basis-1/3 xl:h-screen xl:sticky xl:top-0"
+    >
+      <div class="pt-20"></div>
+      <div class="w-64">
+        <img
+          class="w-32 h-32 md:w-52 md:h-52 rounded-full"
+          src={info.imgUrl}
+          alt={info.title}
+        />
+        <div class="pt-10"></div>
+        <h1 class="text-4xl font-bold pl-2">{info.title}</h1>
+        <p class="text-lg pl-2">{info.desc}</p>
+
+        <div class="pt-5"></div>
+        <div class="flex flex-row w-full">
+          {
+            info.teleCards.map((card) => (
+              <a
+                class="basis-1/4"
+                aria-label={card.title}
+                href={card.url}
+                target="_blank"
+              >
+                <div class={card.iconInfoClass} />
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <div class="pt-20"></div>
+      <div class="grid grid-cols-4 gap-x-4 lg:gap-x-8 lg:w-[54rem]">
+        <div class="col-span-4 md:col-span-2">
+          <Card_4x2 info={info.titleCard} />
+          <Card_4x2 info={info.blogCard} />
+        </div>
+
+        <div class="hidden md:block col-span-4 md:col-span-2 md:col-start-3">
+          {info.secondaryCards.map((card) => <Card_2x1 info={card} />)}
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <Card_2x2 info={info.primaryCards[0]} />
+          <Card_2x2 info={info.primaryCards[1]} />
+        </div>
+        <div class="col-span-2 md:col-span-1">
+          <Card_2x2 info={info.primaryCards[2]} />
+          <Card_2x2 info={info.primaryCards[3]} />
+        </div>
+
+        <div
+          style="display: none"
+          class="map col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative md:aspect-[1/1]"
+        >
+          <div
+            class="rounded-xl shadow-xl shadow-accent hover:shadow-gray-500 w-full h-full lg:w-[26rem] lg:h-[26rem] absolute"
+            id="map-container"
+          >
+          </div>
+          <div
+            class="absolute bottom-8 right-8 badge badge-neutral p-4 rounded-xl font-semibold"
+          >
+            {info.location}
+          </div>
+        </div>
+
+        <!-- 文章列表 -->
+        <div class="col-span-4">
+          <Card_8x1 info={info.sectionTitles[0]} />
+          <Articles_List></Articles_List>
+        </div>
+
+        <!-- 个人项目 -->
+        <div class="col-span-4">
+          <Card_8x1 info={info.sectionTitles[1]} />
+        </div>
+        <div class="col-span-4 md:col-span-2">
+          <Card_4x2 info={info.projectCardStart} />
+        </div>
+        {
+          info.projectCards.map((card) => (
+            <div class="col-span-2 md:col-span-1">
+              <Card_2x2 info={card} />
+            </div>
+          ))
+        }
+        <div class="col-span-4 md:col-span-2">
+          <Card_4x2 info={info.projectCardEnd} />
+        </div>
+
+        <!-- 音乐创作 -->
+        <div class="col-span-4">
+          <Card_8x1 info={info.sectionTitles[2]} />
+        </div>
+        {
+          info.musicCards.map((card) => (
+            <div class="col-span-4 md:col-span-2">
+              <Card_4x2 info={card} />
+            </div>
+          ))
+        }
+        <!-- 联系方式 -->
+        <div class="col-span-4">
+          <Card_8x1 info={info.sectionTitles[3]} />
+        </div>
+        {
+          info.teleCards.map((card) => (
+            <div class="col-span-4 md:col-span-2">
+              <Card_2x1 info={card} />
+            </div>
+          ))
+        }
+      </div>
+      <div class="pt-16"></div>
+      <footer class="text-center">
+        <div class="">made with ❤️ by <a href="https://idealclover.top" target="_blank" class="text-gray-400">idealclover</a></div>
+        <div>🚀 powered by <a href="https://tailwindcss.com/" target="_blank" class="text-gray-400" >tailwindcss</a> <a href="https://astro.build/" target="_blank" class="text-gray-400">astro</a></div>
+        <div>💡 inspired by <a href="https://bento.me" target="_blank" class="text-gray-400">bento.me</a></div>
+        <div class="beian"><a href="https://beian.miit.gov.cn" rel="noreferrer" target="_blank" class="text-gray-400" >京ICP备2024045824号</a></div>
+        <div class="beian"><a href="https://beian.mps.gov.cn/#/query/webSearch?code=11010502054688" rel="noreferrer" target="_blank" class="text-gray-400" >京公网安备11010502054688号</a></div>
+      </footer>
+      <div class="pt-10"></div>
+    </main>
+  </div>
+</div>
+
+<style>
+  .mail {
+    background: url("https://image.idealclover.cn/projects/Homepage/icons/icons.png") -0px -0px no-repeat;
+    width: 64px;
+    height: 64px;
+  }
+  .QQ {
+    background: url("https://image.idealclover.cn/projects/Homepage/icons/icons.png") -64px -0px no-repeat;
+    width: 64px;
+    height: 64px;
+  }
+  .telegram {
+    background: url("https://image.idealclover.cn/projects/Homepage/icons/icons.png") -128px -0px no-repeat;
+    width: 64px;
+    height: 64px;
+  }
+  .twitter {
+    background: url("https://image.idealclover.cn/projects/Homepage/icons/icons.png") -192px -0px no-repeat;
+    width: 64px;
+    height: 64px;
+  }
+</style>
+
+<script>
+  // 更新粉丝数
+  import updateInfo from "../data/update";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    updateInfo.forEach((item) => {
+      fetch(item.updateUrl)
+        .then((response) => response.json())
+        .then((data) => {
+          const element = document.querySelector(`.${item.className}`);
+          if (data.count == null) return;
+          if (element) element.textContent += " " + data.count;
+        })
+        .catch((error) => console.error("Error:", error));
+    });
+  });
+</script>

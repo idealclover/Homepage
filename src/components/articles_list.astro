@@ -1,0 +1,91 @@
+---
+import articlesList from "../data/articles_list";
+---
+
+<div
+  class="card max-lg:card-compact rounded-2xl shadow-xl shadow-accent hover:shadow-gray-500 bg-primary w-full lg:w-[54rem] min-h-[26rem] mb-8"
+>
+  <div class="card-body">
+    <div class="tabs tabs-boxed rounded-xl max-sm:py-2">
+      {
+        articlesList.map((articles, index) => (
+          <div class="max-sm:px-2 tab tab-sm sm:tab-lg" data-tab-index={index}>
+            {articles.title}
+          </div>
+        ))
+      }
+    </div>
+
+    {
+      articlesList.map((articles, index) => (
+        <div
+          class={`tab-content ${index === 0 ? "block" : "hidden"}`}
+          data-tab-index={index}
+        >
+          {articles.articles.map((article) => (
+            <a
+              class="card card-compact rounded-xl bg-base-200 mt-2"
+              href={article.url}
+              target="_blank"
+            >
+              <div class="card-body">
+                <div class="text-base md:text-xl sm:flex sm:justify-between">
+                  {article.title}
+                  <div class="inline-block float-right text-gray-500">
+                    {article.time}
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+
+          <div class="pt-2" />
+
+          <div class="card-actions justify-end">
+            <a
+              class="btn btn-md btn-wide rounded-xl capitalize border-0 max-w-full text-xl"
+              href={articles.url}
+              target="_blank"
+            >查看更多</a>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    function setActiveTab(index: number) {
+      tabs.forEach((tab, i) => {
+        if (i === index) {
+          tab.classList.add("tab-active");
+        } else {
+          tab.classList.remove("tab-active");
+        }
+      });
+
+      contents.forEach((content, i) => {
+        if (i === index) {
+          content.classList.remove("hidden");
+          content.classList.add("block");
+        } else {
+          content.classList.add("hidden");
+          content.classList.remove("block");
+        }
+      });
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const index = parseInt(tab.getAttribute("data-tab-index"));
+        setActiveTab(index);
+      });
+    });
+
+    setActiveTab(0);
+  });
+</script>

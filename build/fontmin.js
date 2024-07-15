@@ -1,5 +1,5 @@
-const fs = require("fs");
-const Fontmin = require("fontmin"); // 需要借助 fontmin 插件
+import fs from 'fs';
+import Fontmin from 'fontmin';
 
 // 参考: https://juejin.cn/post/7336637599895748644
 

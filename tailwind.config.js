@@ -1,5 +1,7 @@
-module.exports = {
-  content: ["./src/**/*.{vue,js,ts}"],
+/** @type {import('tailwindcss').Config} */
+
+export default {
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   plugins: [require("daisyui")],
   daisyui: {
     themes: [
@@ -12,7 +14,7 @@ module.exports = {
           accent: "#b8b8b8",
           neutral: "#ebebeb",
           "base-100": "white",
-          "base-200": "#e6e6e6"
+          "base-200": "#e6e6e6",
         },
         black: {
           primary: "black",
@@ -21,8 +23,8 @@ module.exports = {
           accent: "#2d2d2d",
           neutral: "#272626",
           "base-100": "black",
-          "base-200": "#0d0d0d"
-        },
+          "base-200": "#0d0d0d",
+        }
       },
 
       // "wireframe",
