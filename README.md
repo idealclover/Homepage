@@ -1,10 +1,12 @@
-# 个人主页 idealclover
+# Homepage
 
-> 📪 idealclover 的新个人主页，基于 [Astro](https://astro.build/) 和 [Tailwind CSS](https://tailwindcss.com/) 构建。灵感来自于 [bento.me](https://bento.me/)。
+> 📪 idealclover 的新个人主页，基于 [Astro](https://astro.build/) 和 [Tailwind CSS](https://tailwindcss.com/) 构建。灵感来自于 [bento.me](https://bento.me/)
+
+[预览地址 icl.moe](https://icl.moe)
 
 ## ✨ 功能特性
 
-- 🌐 响应式设计，适配不同设备
+- 🌐 响应式设计，适配手机/平板/电脑不同设备
 - 🚀 体积小巧，打包后 HTML+CSS 100KB 内
 - 🀄️ 使用字体子集化，最大化压缩字体文件
 - ⭐️ 自动获取知乎等平台 star 数 using [spencerwooo/Substats](https://github.com/spencerwooo/Substats)
@@ -36,11 +38,11 @@ yarn build
 │   ├── icons/ --压缩后图标库
 │   └── libs/ --第三方库
 ├── src/
-│   ├── components/ --主要功能与卡片实现
+│   ├── components/
 │   │   ├── app.astro --主页面功能
 │   │   ├── articles_list.astro --文章卡片
 │   │   └── card_xxx.astro --各尺寸卡片
-│   ├── data/ --数据文件
+│   ├── data/
 │   │   ├── articles_list.ts --文章数据
 │   │   ├── info.ts --框架信息
 │   │   └── update.ts --接口信息
@@ -67,6 +69,6 @@ yarn build
 - GitHub：[@idealclover](https://github.com/idealclover)
 - 邮箱：idealclover@163.com
 
-欢迎访问我的个人主页，了解更多关于我的信息！
+欢迎访问我的个人主页了解更多信息~
 
 如果你喜欢这个项目，别忘了给个 Star ⭐️
