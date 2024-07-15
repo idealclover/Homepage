@@ -4,6 +4,8 @@
 
 [预览地址 icl.moe](https://icl.moe)
 
+![idealclover.jpg](https://s2.loli.net/2024/07/16/7d4KYWDmMiAn5CG.jpg)
+
 ## ✨ 功能特性
 
 - 🌐 响应式设计，适配手机/平板/电脑不同设备
