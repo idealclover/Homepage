@@ -11,7 +11,6 @@ interface Props {
     bgStyle: string;
     btnStyle?: string;
     textStyle?: string;
-    btnTextStyle?: string;
     updateUrl?: string;
   };
 }
@@ -48,7 +47,6 @@ const { info } = Astro.props;
         <button
           class:list={[
             info.btnStyle,
-            info.btnTextStyle,
             "btn btn-sm rounded-xl capitalize border-0 max-w-full whitespace-nowrap",
           ]}
         >

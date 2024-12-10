@@ -62,8 +62,7 @@ export default {
         "bg-[#0275D2] shadow-[#0275D2]/75 hover:bg-[#0275D2]/75 hover:shadow-[#0275D2]",
       btnText: "2879 Followers",
       textStyle: "text-white",
-      btnStyle: "zhihu",
-      btnTextStyle: "text-white",
+      btnStyle: "zhihu text-white",
     },
     {
       title: "Bilibili",
@@ -71,9 +70,8 @@ export default {
       btnText: "1634 Followers",
       bgStyle:
         "bg-[#FB7299] shadow-[#FB7299]/75 hover:bg-[#FB7299]/75 hover:shadow-[#FB7299]",
-      btnStyle: "bili",
+      btnStyle: "bili text-white",
       textStyle: "text-white",
-      btnTextStyle: "text-white",
     },
     {
       title: "GitHub",
@@ -81,9 +79,8 @@ export default {
       btnText: "752 Followers",
       bgStyle:
         "bg-[#181717] shadow-[#181717]/75 hover:bg-[#181717]/75 hover:shadow-[#181717]",
-      btnStyle: "github",
+      btnStyle: "github text-white",
       textStyle: "text-white",
-      btnTextStyle: "text-white",
     },
     {
       title: "网易云",
@@ -91,9 +88,8 @@ export default {
       btnText: "77 Followers",
       bgStyle:
         "bg-[#C20B0D] shadow-[#C20B0D]/75 hover:bg-[#C20B0D]/75 hover:shadow-[#C20B0D]",
-      btnStyle: "netease",
+      btnStyle: "netease text-white",
       textStyle: "text-white",
-      btnTextStyle: "text-white",
     },
   ],
   sectionTitles: [
@@ -127,6 +123,35 @@ export default {
   },
   projectCards: [
     {
+      title: "心花日记",
+      desc: "有温度的日记应用",
+      fulldesc: "写下日记，收到温暖，浇灌花儿",
+      subdesc: "APP/小程序",
+      url: "https://m.flowerdiary.top/",
+      btnStyle: "bg-[#66D4BC] hover:bg-[#8DEDDE] text-white",
+      btnText: "8W+ Diaries 📖",
+      textStyle: "text-white",
+      // 心花日记的颜色太浅了 深一个档位
+      bgStyle:
+        "bg-[#3DA88B] shadow-[#3DA88B]/75 hover:bg-[#3DA88B]/75 hover:shadow-[#3DA88B]",
+      // bgStyle:
+      //   "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
+    },
+    {
+      title: "小刻食堂",
+      desc: "明日方舟蹲饼助手",
+      fulldesc: "明日方舟蹲饼助手，实时获取兔兔动态",
+      subdesc: "安卓/iOS APP",
+      url: "https://ceobecanteen.top/",
+      btnStyle: "bg-[#FABA81] hover:bg-[#FDD5A7] text-white",
+      btnText: "1K+ Users 👤",
+      textStyle: "text-white",
+      bgStyle:
+        "bg-[#f1995a] shadow-[#f1995a]/75 hover:bg-[#f1995a]/75 hover:shadow-[#f1995a]",
+      // bgStyle:
+      //   "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
+    },
+    {
       title: "我要戴口罩",
       desc: "给头像戴个口罩",
       fulldesc: "给头像戴个口罩，总计 UV 100w+",
@@ -142,26 +167,6 @@ export default {
       fulldesc: "给头像戴顶毕业帽，让我们跃入人海",
       subdesc: "微信小程序",
       url: "https://idealclover.top/archives/622",
-      btnText: "1K+ Users 👤",
-      bgStyle:
-        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
-    },
-    {
-      title: "心花日记",
-      desc: "有温度的日记应用",
-      fulldesc: "写下日记，收到温暖，浇灌花儿",
-      subdesc: "APP/小程序",
-      url: "https://m.flowerdiary.top/",
-      btnText: "8w+ Diaries 📖",
-      bgStyle:
-        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
-    },
-    {
-      title: "小刻食堂",
-      desc: "明日方舟蹲饼助手",
-      fulldesc: "明日方舟蹲饼助手，实时获取兔兔动态",
-      subdesc: "安卓/iOS APP",
-      url: "https://ceobecanteen.top/",
       btnText: "1K+ Users 👤",
       bgStyle:
         "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
@@ -192,10 +197,9 @@ export default {
       fulldesc: "整理了一些答主的优质知乎回答",
       subdesc: "安卓/iOS APP",
       url: "https://zhuanlan.zhihu.com/p/556201282",
-      btnText: "1k+ Likes ❤️",
+      btnText: "1K+ Likes ❤️",
       textStyle: "text-white",
-      btnStyle: "bg-[#FEAD68] hover:bg-[#FFCC96]",
-      btnTextStyle: "text-white",
+      btnStyle: "bg-[#FEAD68] hover:bg-[#FFCC96] text-white",
       bgStyle:
         "bg-[#fc883b] shadow-[#fc883b]/75 hover:bg-[#fc883b]/75 hover:shadow-[#fc883b]",
     },
@@ -207,16 +211,16 @@ export default {
       url: "https://idealclover.top/archives/613",
       btnText: "138 Stars ✨",
       textStyle: "text-white",
-      btnStyle: "bg-[#54E236] hover:bg-[#84F675]",
-      btnTextStyle: "text-white",
+      btnStyle: "bg-[#54E236] hover:bg-[#84F675] text-white",
       bgStyle:
         "bg-[#2cbb00] shadow-[#2cbb00]/75 hover:bg-[#2cbb00]/75 hover:shadow-[#2cbb00]",
     },
   ],
   projectCardEnd: {
     title: "在 GitHub 查看更多开源创作",
+    desc: "@idealclover",
     url: "https://github.com/idealclover",
-    btnText: "2500+ Stars ✨",
+    btnText: "2.8K+ Stars ✨",
     bgStyle:
       "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_github.jpg')] bg-cover bg-center shadow-[#6e5494]/75 hover:shadow-[#6e5494]",
     textStyle: "text-white",
@@ -276,6 +280,8 @@ export default {
       iconClass: "mail_s",
       iconInfoClass: "mail",
       textStyle: "font-normal",
+      bgStyle:
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
     },
     {
       title: "QQ: 1455169173",
@@ -283,6 +289,8 @@ export default {
       iconClass: "QQ_s",
       iconInfoClass: "QQ",
       textStyle: "font-normal",
+      bgStyle:
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
     },
     {
       title: "Telegram: @idealclover",
@@ -290,6 +298,8 @@ export default {
       iconClass: "telegram_s",
       iconInfoClass: "telegram",
       textStyle: "font-normal",
+      bgStyle:
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
     },
     {
       title: "Twitter: @idealclover",
@@ -297,6 +307,8 @@ export default {
       iconClass: "twitter_s",
       iconInfoClass: "twitter",
       textStyle: "font-normal",
+      bgStyle:
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
     },
   ],
 };

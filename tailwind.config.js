@@ -8,25 +8,27 @@ export default {
       {
         light: {
           primary: "white",
-          "primary-focus": "#f3f4f6",
+          "primary-focus": "#f5f5f5",
           "primary-content": "black",
           secondary: "#ededed",
           accent: "#b8b8b8",
           neutral: "#ebebeb",
           "base-100": "white",
           "base-200": "#e6e6e6",
+          "base-300": "#d9d9d9",
           ".card-title": {
             "margin-bottom": "0!important",
           },
         },
         black: {
-          primary: "black",
+          primary: "#262626",
           "primary-focus": "#222020",
           secondary: "#343232",
           accent: "#2d2d2d",
-          neutral: "#272626",
+          neutral: "#383838",
           "base-100": "black",
           "base-200": "#0d0d0d",
+          "base-300": "#2a2a2a",
         },
       },
 

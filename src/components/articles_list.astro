@@ -3,7 +3,7 @@ import articlesList from "../data/articles_list";
 ---
 
 <div
-  class="card max-lg:card-compact rounded-2xl shadow-xl shadow-accent hover:shadow-gray-500 bg-primary w-full lg:w-[54rem] min-h-[26rem] mb-8"
+  class="card max-lg:card-compact rounded-2xl shadow-xl shadow-accent hover:bg-primary-focus hover:shadow-gray-500 bg-primary w-full lg:w-[54rem] min-h-[26rem] mb-8"
 >
   <div class="card-body">
     <div class="tabs tabs-boxed rounded-xl max-sm:py-2">
@@ -24,7 +24,7 @@ import articlesList from "../data/articles_list";
         >
           {articles.articles.map((article) => (
             <a
-              class="card card-compact rounded-xl bg-base-200 mt-2"
+              class="card card-compact rounded-xl bg-neutral mt-2 hover:bg-base-300"
               href={article.url}
               target="_blank"
             >
