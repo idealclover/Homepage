@@ -25,22 +25,6 @@ import info from "../data/info";
         <div class="pt-10"></div>
         <h1 class="text-4xl font-bold pl-2">{info.title}</h1>
         <p class="text-lg pl-2">{info.desc}</p>
-
-        <!-- <div class="pt-5"></div>
-        <div class="flex flex-row w-full">
-          {
-            info.teleCards.map((card) => (
-              <a
-                class="basis-1/4"
-                aria-label={card.title}
-                href={card.url}
-                target="_blank"
-              >
-                <div class={card.iconInfoClass} />
-              </a>
-            ))
-          }
-        </div> -->
       </div>
     </aside>
 
@@ -52,35 +36,12 @@ import info from "../data/info";
           <Card_4x2 info={info.blogCard} />
         </div>
 
-        <!-- <div class="hidden md:block col-span-4 md:col-span-2 md:col-start-3">
-          {info.secondaryCards.map((card) => <Card_2x1 info={card} />)}
-        </div> -->
         <div class="hidden md:block col-span-2">
           <Card_2x1 info={info.primaryCards[0]} />
           <Card_2x1 info={info.primaryCards[1]} />
           <Card_2x1 info={info.primaryCards[2]} />
           <Card_2x1 info={info.primaryCards[3]} />
         </div>
-        <!-- <div class="col-span-2 md:col-span-1">
-          <Card_2x1 info={info.primaryCards[2]} />
-          <Card_2x1 info={info.primaryCards[3]} />
-        </div> -->
-
-        <!-- <div
-          style="display: none"
-          class="map col-span-4 md:col-span-2 w-full lg:w-[26rem] lg:h-[26rem] relative md:aspect-[1/1]"
-        >
-          <div
-            class="rounded-xl shadow-xl shadow-accent hover:shadow-gray-500 w-full h-full lg:w-[26rem] lg:h-[26rem] absolute"
-            id="map-container"
-          >
-          </div>
-          <div
-            class="absolute bottom-8 right-8 badge badge-neutral p-4 rounded-xl font-semibold"
-          >
-            {info.location}
-          </div>
-        </div> -->
 
         <!-- 文章列表 -->
         <div class="col-span-4">
@@ -117,11 +78,11 @@ import info from "../data/info";
             </div>
           ))
         }
+
         <!-- 关注翠翠 -->
         <div class="md:hidden col-span-4">
           <Card_8x1 info={info.sectionTitles[3]} />
         </div>
-
         {
           info.primaryCards.map((card) => (
             <div class="md:hidden sm:col-span-2 col-span-4">
@@ -129,6 +90,7 @@ import info from "../data/info";
             </div>
           ))
         }
+
         <!-- 联系方式 -->
         <div class="col-span-4">
           <Card_8x1 info={info.sectionTitles[4]} />
@@ -141,6 +103,7 @@ import info from "../data/info";
           ))
         }
       </div>
+
       <div class="pt-12"></div>
       <footer class="text-center">
         <div class="">
