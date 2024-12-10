@@ -15,6 +15,9 @@ export default {
           neutral: "#ebebeb",
           "base-100": "white",
           "base-200": "#e6e6e6",
+          ".card-title": {
+            "margin-bottom": "0!important",
+          },
         },
         black: {
           primary: "black",
@@ -24,7 +27,7 @@ export default {
           neutral: "#272626",
           "base-100": "black",
           "base-200": "#0d0d0d",
-        }
+        },
       },
 
       // "wireframe",
@@ -32,5 +35,19 @@ export default {
     ],
     // themes: ["black"],
     darkTheme: "black",
+  },
+  theme: {
+    extend: {
+      screens: {
+        // xs以下：折叠屏竖屏
+        xs: "350px",
+        // xs - sm 普通手机竖屏
+        sm: "480px",
+        // sm - md 折叠屏展开竖屏
+        md: "680px",
+        // md - lg 平板竖屏 普通手机横屏
+        lg: "960px",
+      },
+    },
   },
 };

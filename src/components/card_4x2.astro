@@ -3,6 +3,7 @@ interface Props {
   info: {
     title: string;
     desc?: string;
+    subdesc?: string;
     url: string;
     btnText: string;
     bgStyle: string;
@@ -16,20 +17,24 @@ const { info } = Astro.props;
 ---
 
 <a href={info.url} target="_blank">
-  <div class:list={[
-    "card max-lg:card-compact rounded-2xl shadow-xl w-full max-sm:aspect-[2/1] md:aspect-[2/1] lg:w-[26rem] lg:h-[12rem] mb-8",
-    info.bgStyle,
-    info.textStyle
-  ]}>
+  <div
+    class:list={[
+      "card max-lg:card-compact rounded-2xl shadow-xl w-full md:h-[10.5rem] lg:w-[26rem] lg:h-[12rem] mb-8",
+      info.bgStyle,
+      info.textStyle,
+    ]}
+  >
     <div class="card-body rounded-2xl hover:glass">
       <h2 class="card-title whitespace-nowrap">{info.title}</h2>
-      <p>{info.desc}</p>
+      <p>{info.desc}<br /> {info.subdesc}</p>
       <div class="card-actions justify-end">
-        <button class:list={[
-          "btn btn-sm rounded-xl border-0",
-          info.btnStyle,
-          info.btnTextStyle
-        ]}>
+        <button
+          class:list={[
+            "btn btn-sm rounded-xl border-0",
+            info.btnStyle,
+            info.btnTextStyle,
+          ]}
+        >
           {info.btnText}
         </button>
       </div>

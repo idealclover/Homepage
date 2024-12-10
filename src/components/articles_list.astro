@@ -9,7 +9,7 @@ import articlesList from "../data/articles_list";
     <div class="tabs tabs-boxed rounded-xl max-sm:py-2">
       {
         articlesList.map((articles, index) => (
-          <div class="max-sm:px-2 tab tab-sm sm:tab-lg" data-tab-index={index}>
+          <div class="max-sm:px-2 tab tab-sm md:tab-lg" data-tab-index={index}>
             {articles.title}
           </div>
         ))
@@ -46,7 +46,9 @@ import articlesList from "../data/articles_list";
               class="btn btn-md btn-wide rounded-xl capitalize border-0 max-w-full text-xl"
               href={articles.url}
               target="_blank"
-            >查看更多</a>
+            >
+              查看更多
+            </a>
           </div>
         </div>
       ))
