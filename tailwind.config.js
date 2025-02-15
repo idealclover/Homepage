@@ -50,7 +50,8 @@ export default {
         // md - lg 平板 普通手机横屏
         lg: "960px",
         // lg - xl 平板横屏
-        xl: "1200px"
+        xl: "1200px",
+        xxl: "1280px"
       },
     },
   },
