@@ -26,4 +26,6 @@ if(mode !== "cn") {
   updatedIndexHtml = updatedIndexHtml.replace(beian, "")
 }
 
+updatedIndexHtml = updatedIndexHtml.replaceAll("\n", "")
+
 fs.writeFileSync(indexHtmlPath, updatedIndexHtml, "utf-8");

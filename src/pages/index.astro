@@ -6,10 +6,7 @@ import App from "../components/app.astro";
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>idealclover</title>
     <meta name="description" content="翠翠的个人名片👋" />
     <meta property="og:title" content="idealclover" />
@@ -45,11 +42,11 @@ import App from "../components/app.astro";
     />
     <link rel="manifest" href=`${Astro.site}/favicons/site.webmanifest` />
     <link rel="dns-prefetch" href="//idealclover.top" />
-    <!-- TODO:这儿有点儿丑.. -->
     <style>
       @font-face {
         font-family: "MaokenZhuyuanTi";
-        src: url(https://image.idealclover.cn/projects/Homepage/fonts/MaoKenZhuYuanTi.ttf);
+        src: url(https://image.idealclover.cn/projects/Homepage/fonts/MaoKenZhuYuanTi.ttf?v=241202);
+        /* src: url(./fonts/MaoKenZhuYuanTi.ttf); */
         font-display: swap;
       }
 
@@ -57,17 +54,17 @@ import App from "../components/app.astro";
         cursor: url(https://image.idealclover.cn/projects/Homepage/icons/cursor.ico),
           auto;
         font-family: "MaokenZhuyuanTi";
+        overflow-x: hidden;
       }
     </style>
   </head>
-  <body>
+  <body class="bg-gray-100 dark:bg-neutral-900">
     <div style="display: none">
       <img src=`${Astro.site}/icons/cover.png` alt="" />
     </div>
     <App />
     <script defer src=`${Astro.site}/libs/mouse-click.js`></script>
-
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-EPS8XLSB6V"></script>
-    <script is:inline>function loadScript(){if(!isLoaded&&window.innerWidth>768)return scriptElement=document.createElement("script"),scriptElement.src="https://webapi.amap.com/maps?v=1.4.15",document.head.appendChild(scriptElement),scriptElement.onload=function(){document.querySelector(".map").style.display="block";new AMap.Map("map-container",{center:[116.397428,39.90923],zoom:10})},void(isLoaded=!0);if(isLoaded)if(window.innerWidth<=768){document.querySelector(".map").style.display="none"}else{document.querySelector(".map").style.display="block"}}function gtag(){dataLayer.push(arguments)}let isLoaded=!1,scriptElement=null;loadScript(),window.addEventListener("resize",loadScript),window.heap=window.heap||[],heap.load=function(e,t){var r,a,n,p,o;for(window.heap.appid=e,window.heap.config=t=t||{},(r=document.createElement("script")).type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js",(a=document.getElementsByTagName("script")[0]).parentNode.insertBefore(r,a),n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])},heap.load("3744982711"),window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-EPS8XLSB6V"),"serviceWorker"in navigator&&(console.log("Will the service worker register?"),navigator.serviceWorker.register("https://idealclover.top/sw.js").then((function(){console.log("Yes, it did.")})).catch((function(err){console.log("No it did not. This happened: ",err)})));</script>
+    <script is:inline>function gtag(){dataLayer.push(arguments)}window.heap=window.heap||[],heap.load=function(e,t){var r,a,n,p,o;for(window.heap.appid=e,window.heap.config=t=t||{},(r=document.createElement("script")).type="text/javascript",r.async=!0,r.src="https://cdn.heapanalytics.com/js/heap-"+e+".js",(a=document.getElementsByTagName("script")[0]).parentNode.insertBefore(r,a),n=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],o=0;o<p.length;o++)heap[p[o]]=n(p[o])},heap.load("3744982711"),window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-EPS8XLSB6V");</script>
   </body>
 </html>

@@ -3,12 +3,14 @@ interface Props {
   info: {
     title: string;
     desc?: string;
+    fulldesc?: string;
+    subdesc?: string;
     url: string;
     btnText: string;
+    btnTextFull?: string;
     bgStyle: string;
     btnStyle?: string;
     textStyle?: string;
-    btnTextStyle?: string;
     updateUrl?: string;
   };
 }
@@ -18,19 +20,35 @@ const { info } = Astro.props;
 
 <a href={info.url} target="_blank">
   <div
-    class:list={["card max-lg:card-compact rounded-2xl shadow-xl w-full max-sm:aspect-[1/1] md:aspect-[1/1] lg:w-[12rem] lg:h-[12rem] mb-8", info.bgStyle]}
+    class:list={[
+      "card max-lg:card-compact rounded-2xl shadow-xl w-full md:aspect-[1/1] lg:w-[12rem] lg:h-[12rem] mb-8",
+      info.bgStyle,
+    ]}
   >
     <div class="card-body w-full h-full">
       <h2
-        class:list={[info.textStyle, "card-title text-base sm:text-xl whitespace-nowrap"]}
+        class:list={[
+          info.textStyle,
+          "card-title text-base sm:text-xl whitespace-nowrap",
+        ]}
       >
         {info.title}
       </h2>
-      <p class={info.textStyle}>{info.desc}</p>
+      <!-- 大屏幕使用简略信息 -->
+      <p class:list={["max-sm:hidden", info.textStyle]}>
+        {info.desc}<br />{info.subdesc}
+      </p>
+      <!-- 小屏幕使用完整信息 -->
+      <p class:list={["sm:hidden", info.textStyle]}>
+        {info.fulldesc}<br />{info.subdesc}
+      </p>
       <div class="h-full"></div>
       <div class="card-actions justify-end">
         <button
-          class:list={[info.btnStyle, info.btnTextStyle, "btn btn-sm rounded-xl capitalize border-0 max-w-full whitespace-nowrap"]}
+          class:list={[
+            info.btnStyle,
+            "btn btn-sm rounded-xl capitalize border-0 max-w-full whitespace-nowrap",
+          ]}
         >
           {info.btnText}
         </button>
