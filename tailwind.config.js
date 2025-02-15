@@ -47,8 +47,10 @@ export default {
         sm: "480px",
         // sm - md 折叠屏展开竖屏
         md: "680px",
-        // md - lg 平板竖屏 普通手机横屏
+        // md - lg 平板 普通手机横屏
         lg: "960px",
+        // lg - xl 平板横屏
+        xl: "1200px"
       },
     },
   },

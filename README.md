@@ -4,7 +4,7 @@
 
 [预览地址 icl.moe](https://icl.moe)
 
-![idealclover.jpg](https://s2.loli.net/2024/07/16/7d4KYWDmMiAn5CG.jpg)
+![idealclover.jpg](https://s2.loli.net/2025/02/15/aVESFwu64Qlm1Nt.jpg)
 
 ## ✨ 功能特性
 
