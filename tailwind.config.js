@@ -41,7 +41,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        // xs以下：折叠屏竖屏
+        // xs 以下：折叠屏竖屏
         xs: "350px",
         // xs - sm 普通手机竖屏
         sm: "480px",
@@ -51,7 +51,9 @@ export default {
         lg: "960px",
         // lg - xl 平板横屏
         xl: "1200px",
-        xxl: "1280px"
+        // xl - xxl 13 寸电脑
+        xxl: "1280px",
+        // xxl+ 主要电脑与显示器尺寸
       },
     },
   },
