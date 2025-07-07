@@ -250,28 +250,28 @@ export default {
       title: "翠儿逛逛展：中国电影博物馆",
       url: "https://www.xiaohongshu.com/explore/686bd5fd000000002400a7b0?xsec_token=AB0q8K--ASdRGa_WQK6IoPDm5h3W0QuvZPTjUKun1dtlU=&xsec_source=pc_search",
       bgStyle:
-        "bg-[url('https://sns-webpic-qc.xhscdn.com/202507072339/d59eeb7b2222dc3cb069bb2d1e1733c9/notes_pre_post/1040g3k831jkvpgs0j2005ogl1q5415skqjpe0g0!nd_dft_wlteh_webp_3')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+        "bg-[url('https://image.idealclover.cn/projects/Homepage/assets/xhs_1.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
     },
     {
       title: "翠儿逛逛展：铁道博物馆（东郊馆）",
       url: "https://www.xiaohongshu.com/explore/686a79b50000000015021858?xsec_token=ABIJKaAjtDscsBMgUW6D5izXgVXwnKC3-7Mn6_Q8HqBmE=&xsec_source=pc_search",
       bgStyle:
-        "bg-[url('https://sns-webpic-qc.xhscdn.com/202507072339/d3b0059fbae0a1750744fea1b48b3492/spectrum/1040g34o31jjla2aoigdg5ogl1q5415sktomntb0!nd_dft_wlteh_webp_3')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+        "bg-[url('https://image.idealclover.cn/projects/Homepage/assets/xhs_2.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
     },
     {
       title: "翠儿逛逛展：无人机应用及防控大会（下）",
       url: "https://www.xiaohongshu.com/explore/686945a3000000001203ceb3?xsec_token=ABQ3TiZa-Faa5STBNd5HPuuqj6Dl6xzoVddFfSbmkm9E4=&xsec_source=pc_search",
       bgStyle:
-        "bg-[url('https://sns-webpic-qc.xhscdn.com/202507072341/38a347cce87dde0bc412952debfd7344/spectrum/1040g0k031jifrr5i361g5ogl1q5415skpi7lcsg!nd_dft_wgth_webp_3')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+        "bg-[url('https://image.idealclover.cn/projects/Homepage/assets/xhs_3.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
     },
     {
       title: "翠儿逛逛展：无人机应用及防控大会（上）",
       url: "https://www.xiaohongshu.com/explore/6869426000000000120210a9?xsec_token=ABQ3TiZa-Faa5STBNd5HPuuiPaJEcuqFBxxMEydTzszSA=&xsec_source=pc_search",
       bgStyle:
-        "bg-[url('https://sns-webpic-qc.xhscdn.com/202507072340/6c855bcdb60a917a29caab2cbd3e94a8/spectrum/1040g34o31jifemusii305ogl1q5415sk5fmgrv8!nd_dft_wgth_webp_3')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+        "bg-[url('https://image.idealclover.cn/projects/Homepage/assets/xhs_4.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
     },
   ],

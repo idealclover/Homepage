@@ -72,13 +72,26 @@ import info from "../data/info";
         <div class="col-span-4">
           <Card_8x1 info={info.sectionTitles[2]} />
         </div>
-        {
-          info.diaryCards.map((card) => (
-            <div class="col-span-4 sm:col-span-2 md:col-span-1">
-              <Card_2x3 info={card} />
-            </div>
-          ))
-        }
+        <div class="col-span-4 overflow-x-auto scrollbar-hide">
+          <div class="flex flex-nowrap gap-4 pb-4 md:hidden" style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+            {
+              info.diaryCards.map((card) => (
+                <div class="flex-none w-[40%] scroll-snap-align-start" style="scroll-snap-align: start;">
+                  <Card_2x3 info={card} />
+                </div>
+              ))
+            }
+          </div>
+          <div class="hidden md:grid md:grid-cols-4 gap-x-4 lg:gap-x-8">
+            {
+              info.diaryCards.map((card) => (
+                <div class="col-span-1">
+                  <Card_2x3 info={card} />
+                </div>
+              ))
+            }
+          </div>
+        </div>
 
         <!-- 音乐创作 -->
         <div class="col-span-4">
@@ -189,6 +202,15 @@ import info from "../data/info";
       no-repeat;
     width: 64px;
     height: 64px;
+  }
+  
+  /* 隐藏滚动条但保留滚动功能 */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
   }
 </style>
 
