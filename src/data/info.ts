@@ -66,14 +66,14 @@ export default {
       url: "https://www.zhihu.com/people/cuicuijiang",
       bgStyle:
         "bg-[#0275D2] shadow-[#0275D2]/75 hover:bg-[#0275D2]/75 hover:shadow-[#0275D2]",
-      btnText: "2879 Followers",
+      btnText: "2916 Followers",
       textStyle: "text-white",
       btnStyle: "zhihu text-white",
     },
     {
       title: "Bilibili",
       url: "https://space.bilibili.com/5044093",
-      btnText: "1634 Followers",
+      btnText: "1686 Followers",
       bgStyle:
         "bg-[#FB7299] shadow-[#FB7299]/75 hover:bg-[#FB7299]/75 hover:shadow-[#FB7299]",
       btnStyle: "bili text-white",
@@ -82,7 +82,7 @@ export default {
     {
       title: "GitHub",
       url: "https://github.com/idealclover",
-      btnText: "752 Followers",
+      btnText: "808 Followers",
       bgStyle:
         "bg-[#181717] shadow-[#181717]/75 hover:bg-[#181717]/75 hover:shadow-[#181717]",
       btnStyle: "github text-white",
@@ -113,6 +113,9 @@ export default {
     },
     {
       title: "🗃️ 个人项目",
+    },
+    {
+      title: "📕 逛展日记",
     },
     {
       title: "🎼 音乐创作",
@@ -192,7 +195,7 @@ export default {
       fulldesc: "简洁、美观、可配置的打赏页面",
       subdesc: "应用于个人打赏",
       url: "https://donate.idealclover.cn",
-      btnText: "82 Stars ✨",
+      btnText: "91 Stars ✨",
       bgStyle:
         "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
     },
@@ -202,7 +205,7 @@ export default {
       fulldesc: "简洁、美观、可配置的应用下载页",
       subdesc: "应用于南哪课表",
       url: "https://nju.app",
-      btnText: "53 Stars ✨",
+      btnText: "65 Stars ✨",
       bgStyle:
         "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
     },
@@ -224,7 +227,7 @@ export default {
       subdesc: "适配 Typecho",
       fulldesc: "使用 UniAPP 搭建的小程序博客",
       url: "https://idealclover.top/archives/613",
-      btnText: "138 Stars ✨",
+      btnText: "141 Stars ✨",
       textStyle: "text-white",
       btnStyle: "bg-[#54E236] hover:bg-[#84F675] text-white",
       bgStyle:
@@ -235,19 +238,49 @@ export default {
     title: "在 GitHub 查看更多开源创作",
     desc: "@idealclover",
     url: "https://github.com/idealclover",
-    btnText: "2.8K+ Stars ✨",
+    btnText: "3K+ Stars ✨",
     bgStyle:
       "bg-[url('https://cdn.idealclover.cn/Projects/homepage/project_github.jpg')] bg-cover bg-center shadow-[#6e5494]/75 hover:shadow-[#6e5494]",
     textStyle: "text-white",
     btnStyle: "glass",
     btnTextStyle: "text-white capitalize",
   },
+  diaryCards: [
+    {
+      title: "翠儿逛逛展：中国电影博物馆",
+      url: "https://www.xiaohongshu.com/explore/686bd5fd000000002400a7b0?xsec_token=AB0q8K--ASdRGa_WQK6IoPDm5h3W0QuvZPTjUKun1dtlU=&xsec_source=pc_search",
+      bgStyle:
+        "bg-[url('https://sns-webpic-qc.xhscdn.com/202507072339/d59eeb7b2222dc3cb069bb2d1e1733c9/notes_pre_post/1040g3k831jkvpgs0j2005ogl1q5415skqjpe0g0!nd_dft_wlteh_webp_3')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+      textStyle: "text-white",
+    },
+    {
+      title: "翠儿逛逛展：铁道博物馆（东郊馆）",
+      url: "https://www.xiaohongshu.com/explore/686a79b50000000015021858?xsec_token=ABIJKaAjtDscsBMgUW6D5izXgVXwnKC3-7Mn6_Q8HqBmE=&xsec_source=pc_search",
+      bgStyle:
+        "bg-[url('https://sns-webpic-qc.xhscdn.com/202507072339/d3b0059fbae0a1750744fea1b48b3492/spectrum/1040g34o31jjla2aoigdg5ogl1q5415sktomntb0!nd_dft_wlteh_webp_3')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+      textStyle: "text-white",
+    },
+    {
+      title: "翠儿逛逛展：无人机应用及防控大会（下）",
+      url: "https://www.xiaohongshu.com/explore/686945a3000000001203ceb3?xsec_token=ABQ3TiZa-Faa5STBNd5HPuuqj6Dl6xzoVddFfSbmkm9E4=&xsec_source=pc_search",
+      bgStyle:
+        "bg-[url('https://sns-webpic-qc.xhscdn.com/202507072341/38a347cce87dde0bc412952debfd7344/spectrum/1040g0k031jifrr5i361g5ogl1q5415skpi7lcsg!nd_dft_wgth_webp_3')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+      textStyle: "text-white",
+    },
+    {
+      title: "翠儿逛逛展：无人机应用及防控大会（上）",
+      url: "https://www.xiaohongshu.com/explore/6869426000000000120210a9?xsec_token=ABQ3TiZa-Faa5STBNd5HPuuiPaJEcuqFBxxMEydTzszSA=&xsec_source=pc_search",
+      bgStyle:
+        "bg-[url('https://sns-webpic-qc.xhscdn.com/202507072340/6c855bcdb60a917a29caab2cbd3e94a8/spectrum/1040g34o31jifemusii305ogl1q5415sk5fmgrv8!nd_dft_wgth_webp_3')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+      textStyle: "text-white",
+    },
+  ],
   musicCards: [
     {
       title: "为谁而为（原作 @COPY）",
       desc: "青溯 version",
       url: "https://www.bilibili.com/video/BV1cs4y1z7Mq",
-      btnText: "3065 views 🎥",
+      btnText: "3542 views 🎥",
       bgStyle:
         "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_1.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
@@ -258,7 +291,7 @@ export default {
       title: "我从人间走过（原作 @瞳荧荧）",
       desc: "青溯 version",
       url: "https://www.bilibili.com/video/BV1BF411L7AH",
-      btnText: "1670 views 🎥",
+      btnText: "1750 views 🎥",
       bgStyle:
         "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_2.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
@@ -269,7 +302,7 @@ export default {
       title: "千里邀月（原作 @纯白）",
       desc: "星尘inf/青溯/沨漪 version",
       url: "https://www.bilibili.com/video/BV11G4y1z7XZ",
-      btnText: "2087 views 🎥",
+      btnText: "2163 views 🎥",
       bgStyle:
         "bg-[url('https://cdn.idealclover.cn/Projects/homepage/music_3.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",

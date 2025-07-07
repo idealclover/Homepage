@@ -1,6 +1,7 @@
 ---
 import Card_2x1 from "./card_2x1.astro";
 import Card_2x2 from "./card_2x2.astro";
+import Card_2x3 from "./card_2x3.astro";
 import Card_4x2 from "./card_4x2.astro";
 import Card_8x1 from "./card_8x1.astro";
 import Articles_List from "./articles_list.astro";
@@ -67,9 +68,21 @@ import info from "../data/info";
           <Card_4x2 info={info.projectCardEnd} />
         </div>
 
-        <!-- 音乐创作 -->
+        <!-- 生活日记 -->
         <div class="col-span-4">
           <Card_8x1 info={info.sectionTitles[2]} />
+        </div>
+        {
+          info.diaryCards.map((card) => (
+            <div class="col-span-4 sm:col-span-2 md:col-span-1">
+              <Card_2x3 info={card} />
+            </div>
+          ))
+        }
+
+        <!-- 音乐创作 -->
+        <div class="col-span-4">
+          <Card_8x1 info={info.sectionTitles[3]} />
         </div>
         {
           info.musicCards.map((card) => (
