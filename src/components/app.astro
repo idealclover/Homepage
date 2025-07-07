@@ -73,10 +73,16 @@ import info from "../data/info";
           <Card_8x1 info={info.sectionTitles[2]} />
         </div>
         <div class="col-span-4 overflow-x-auto scrollbar-hide">
-          <div class="flex flex-nowrap gap-4 pb-4 md:hidden" style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+          <div
+            class="flex flex-nowrap gap-4 pb-4 md:hidden"
+            style="scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;"
+          >
             {
               info.diaryCards.map((card) => (
-                <div class="flex-none w-[40%] scroll-snap-align-start" style="scroll-snap-align: start;">
+                <div
+                  class="flex-none w-[40%] scroll-snap-align-start"
+                  style="scroll-snap-align: start;"
+                >
                   <Card_2x3 info={card} />
                 </div>
               ))
@@ -130,8 +136,7 @@ import info from "../data/info";
         }
       </div>
 
-      <div class="pt-12"></div>
-      <footer class="text-center">
+      <footer class="text-center py-10">
         <div class="">
           made with ❤️ by <a
             href="https://idealclover.top"
@@ -173,7 +178,6 @@ import info from "../data/info";
           >
         </div>
       </footer>
-      <div class="pt-10"></div>
     </main>
   </div>
 </div>
@@ -203,14 +207,14 @@ import info from "../data/info";
     width: 64px;
     height: 64px;
   }
-  
+
   /* 隐藏滚动条但保留滚动功能 */
   .scrollbar-hide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
   .scrollbar-hide::-webkit-scrollbar {
-    display: none;  /* Chrome, Safari and Opera */
+    display: none; /* Chrome, Safari and Opera */
   }
 </style>
 
