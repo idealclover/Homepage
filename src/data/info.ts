@@ -6,7 +6,8 @@ export default {
   titleCard: {
     title: "翠翠 @idealclover",
     desc: "商业化产品经理",
-    subdesc: "独立开发者/个人博主/Vocaloid",
+    subdesc: "南京大学20届本科 & 清华大学MBA在读",
+    thirddesc: "独立开发者/个人博主/Vocaloid",
     url: "https://idealclover.top/about.html",
     bgStyle:
       "bg-primary shadow-accent hover:bg-primary-focus hover:shadow-gray-500",
@@ -34,10 +35,15 @@ export default {
   },
   secondaryCards: [
     {
-      title: "即刻",
-      url: "https://web.okjike.com/u/e2ede1ee-79e6-420b-92fc-9983566db44c",
-      iconClass: "jike",
+      title: "网易云",
+      url: "https://music.163.com/#/artist?id=52267156",
+      iconClass: "netease",
     },
+    // {
+    //   title: "即刻",
+    //   url: "https://web.okjike.com/u/e2ede1ee-79e6-420b-92fc-9983566db44c",
+    //   iconClass: "jike",
+    // },
     {
       title: "酷安",
       url: "https://www.coolapk.com/u/999081",
@@ -83,14 +89,23 @@ export default {
       textStyle: "text-white",
     },
     {
-      title: "网易云",
-      url: "https://music.163.com/#/artist?id=52267156",
-      btnText: "77 Followers",
+      title: "即刻",
+      url: "https://web.okjike.com/u/e2ede1ee-79e6-420b-92fc-9983566db44c",
+      btnText: "537 Followers",
       bgStyle:
-        "bg-[#C20B0D] shadow-[#C20B0D]/75 hover:bg-[#C20B0D]/75 hover:shadow-[#C20B0D]",
-      btnStyle: "netease text-white",
+        "bg-[#FFE411] shadow-[#C9A705]/75 hover:bg-[#C9A705]/75 hover:shadow-[#C9A705]",
+      btnStyle: "text-white",
       textStyle: "text-white",
     },
+    // {
+    //   title: "网易云",
+    //   url: "https://music.163.com/#/artist?id=52267156",
+    //   btnText: "77 Followers",
+    //   bgStyle:
+    //     "bg-[#C20B0D] shadow-[#C20B0D]/75 hover:bg-[#C20B0D]/75 hover:shadow-[#C20B0D]",
+    //   btnStyle: "netease text-white",
+    //   textStyle: "text-white",
+    // },
   ],
   sectionTitles: [
     {

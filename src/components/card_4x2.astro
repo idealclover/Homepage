@@ -4,6 +4,7 @@ interface Props {
     title: string;
     desc?: string;
     subdesc?: string;
+    thirddesc?: string;
     url: string;
     btnText: string;
     bgStyle: string;
@@ -26,7 +27,7 @@ const { info } = Astro.props;
   >
     <div class="card-body rounded-2xl hover:glass">
       <h2 class="card-title whitespace-nowrap">{info.title}</h2>
-      <p>{info.desc}<br /> {info.subdesc}</p>
+      <p>{info.desc}<br />{info.subdesc}<br />{info.thirddesc}</p>
       <div class="card-actions justify-end">
         <button
           class:list={[
