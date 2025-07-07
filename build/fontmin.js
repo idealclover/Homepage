@@ -45,6 +45,9 @@ function generateFinalHTML(finalString) {
 				text: finalString, // 也可以直接指定需要生成的字符集
 				hinting: false,
 			})
+		)
+		.use(
+			Fontmin.ttf2woff2()
 		);
 
 	fontmin.run((err) => {
