@@ -187,7 +187,7 @@ export default {
       url: "https://idealclover.top/archives/622",
       btnText: "1K+ Users 👤",
       bgStyle:
-        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500 max-sm:hidden",
     },
     {
       title: "Merger-Plus",
@@ -197,7 +197,7 @@ export default {
       url: "https://donate.idealclover.cn",
       btnText: "91 Stars ✨",
       bgStyle:
-        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500 max-sm:hidden",
     },
     {
       title: "Easy-DLD",
@@ -207,7 +207,7 @@ export default {
       url: "https://nju.app",
       btnText: "65 Stars ✨",
       bgStyle:
-        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500",
+        "bg-primary hover:bg-primary-focus shadow-accent hover:shadow-gray-500 max-sm:hidden",
     },
     {
       title: "Caritas APP",
