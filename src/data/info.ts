@@ -5,9 +5,8 @@ export default {
   location: "Beijing, China",
   titleCard: {
     title: "翠翠 @idealclover",
-    desc: "商业化产品经理",
+    desc: "产品经理/独立开发者/个人博主",
     subdesc: "南京大学20届本科 & 清华大学MBA在读",
-    thirddesc: "独立开发者/个人博主/Vocaloid",
     url: "https://idealclover.top/about.html",
     bgStyle:
       "bg-primary shadow-accent hover:bg-primary-focus hover:shadow-gray-500",
@@ -247,6 +246,13 @@ export default {
   },
   diaryCards: [
     {
+      title: "翠儿逛逛展：黑神话悟空艺术展",
+      url: "https://www.xiaohongshu.com/explore/687a4b7e0000000012016230?source=webshare&xhsshare=pc_web&xsec_token=ABfLj0ylTs8rlqobIgcIy_moxQqCDc5BSW7BHdV0df6RQ=&xsec_source=pc_share",
+      bgStyle:
+        "bg-[url('https://image.idealclover.cn/projects/Homepage/assets/xhs_5.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
+      textStyle: "text-white",
+    },
+    {
       title: "翠儿逛逛展：中国电影博物馆",
       url: "https://www.xiaohongshu.com/explore/686bd5fd000000002400a7b0?xsec_token=AB0q8K--ASdRGa_WQK6IoPDm5h3W0QuvZPTjUKun1dtlU=&xsec_source=pc_search",
       bgStyle:
@@ -265,13 +271,6 @@ export default {
       url: "https://www.xiaohongshu.com/explore/686945a3000000001203ceb3?xsec_token=ABQ3TiZa-Faa5STBNd5HPuuqj6Dl6xzoVddFfSbmkm9E4=&xsec_source=pc_search",
       bgStyle:
         "bg-[url('https://image.idealclover.cn/projects/Homepage/assets/xhs_3.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
-      textStyle: "text-white",
-    },
-    {
-      title: "翠儿逛逛展：无人机应用及防控大会（上）",
-      url: "https://www.xiaohongshu.com/explore/6869426000000000120210a9?xsec_token=ABQ3TiZa-Faa5STBNd5HPuuiPaJEcuqFBxxMEydTzszSA=&xsec_source=pc_search",
-      bgStyle:
-        "bg-[url('https://image.idealclover.cn/projects/Homepage/assets/xhs_4.jpg')] bg-cover bg-center shadow-accent hover:shadow-gray-500",
       textStyle: "text-white",
     },
   ],
