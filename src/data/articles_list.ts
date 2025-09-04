@@ -107,20 +107,20 @@ export default [
         time: "2024.09.30",
       },
       {
-        title: "2021-2023年终总结：跃入人海，潮起潮落",
-        url: "https://idealclover.top/archives/637",
-        time: "2024.02.23",
+        title: "关于《后浪》，随便写点什么",
+        url: "https://idealclover.top/archives/621",
+        time: "2020.05.04",
       },
       {
-        title: "2020 年年终总结：致即将 22 岁的自己",
-        url: "https://idealclover.top/archives/627",
-        time: "2021.05.01",
+        title: "我看好 Fluent Design，但不看好微软",
+        url: "https://idealclover.top/archives/615",
+        time: "2020.04.12",
       },
       {
-        title: "idealclover@科技 X",
-        url: "https://idealclover.top/archives/624",
-        time: "2020.05.26",
-      }
+        title: "身份、立场与偏见：为什么互联网愈发“水火不容”",
+        url: "https://idealclover.top/archives/614",
+        time: "2020.04.03",
+      },
     ],
   },
 
